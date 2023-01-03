@@ -4,13 +4,13 @@ import MusicBox from "../components/MusicBox.vue";
 import { Carousel, Slide, Navigation, Pagination } from "vue3-carousel";
 import { computedScreen } from "../store/screen.store";
 
-const videoIDs = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc"];
+const videoIDs = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>
 
 <template>
   <div>
     <div
-      class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-right-bottom transition-all duration-500 lg:h-screen"
+      class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top transition-all duration-500 lg:h-[48rem]"
     ></div>
     <Section title="Music" class="bg-black text-white">
       <div class="flex flex-col justify-around lg:flex-row">
@@ -30,7 +30,7 @@ const videoIDs = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc"];
       There are no tours announced at the moment.
     </Section>
     <Section title="Singles" class="bg-white px-0">
-      <Carousel :wrap-around="true">
+      <Carousel wrap-around :autoplay="5000">
         <Slide v-for="videoID in videoIDs" :key="videoID" class="w-full">
           <iframe
             :width="computedScreen.isMobile.value ? 248 : 560"

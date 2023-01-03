@@ -55,7 +55,7 @@ const teespringArticles = [
     <Section title="Big Cartel" class="bg-black text-white">
       <div class="flex flex-row flex-wrap justify-around">
         <MerchBox
-          class="m-4 bg-[#FFF]"
+          class="m-4 bg-[#FFF] text-black"
           v-for="article in bigCartelArticles"
           :key="article.title"
           :title="article.title"

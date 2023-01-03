@@ -8,8 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <a :href="articleUrl" target="_blank" rel="noopener noreferrer">
-    <div class="p-4 text-sm uppercase text-black hover:opacity-70 lg:text-2xl">
+  <a :href="articleUrl" target="_blank" rel="noopener noreferrer" class="rounded-md">
+    <div class="p-4 text-sm uppercase hover:opacity-70 lg:text-2xl">
       <div
         class="flex h-[6rem] w-[6rem] items-center justify-center lg:h-[20rem] lg:w-[20rem]"
       >

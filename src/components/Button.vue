@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <button
-    class="my-2 mx-auto w-fit bg-white p-2 text-base font-thin uppercase text-black hover:opacity-90 focus:outline-none lg:my-4"
+    class="my-2 mx-auto w-fit rounded-md bg-white p-2 text-base font-thin uppercase text-black hover:opacity-90 focus:outline-none lg:my-4"
     @click="clickHandler"
   >
     <slot></slot>
