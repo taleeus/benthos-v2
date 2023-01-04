@@ -20,11 +20,11 @@ const galleryUris = [
 
 <template>
   <div>
-    <Section title="Photos" class="bg-egg">
-      <GallerySection :gallery-uris="galleryUris"></GallerySection>
-    </Section>
-    <Section title="Videos" class="bg-white px-0">
+    <Section title="Videos" class="bg-egg px-0">
       <VideosSection :video-ids="videoIds"></VideosSection>
+    </Section>
+    <Section title="Photos" class="bg-white">
+      <GallerySection :gallery-uris="galleryUris"></GallerySection>
     </Section>
   </div>
 </template>

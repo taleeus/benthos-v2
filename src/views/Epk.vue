@@ -23,14 +23,11 @@ const galleryUris = [
 <template>
   <div>
     <div
-      class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top transition-all duration-500 lg:h-[48rem]"
+      class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top px-8 transition-all duration-500 lg:h-[48rem] lg:px-32"
     >
-      <img src="/assets/logos/logo.svg" alt="logo" />
+      <img src="/assets/logos/logo-black.svg" alt="logo" class="opacity-75" />
     </div>
-    <div
-      class="flex flex-row-reverse"
-      :class="{ 'flex-col': computedScreen.isMobile.value }"
-    >
+    <div class="flex flex-col lg:flex-row-reverse">
       <div>
         <Section title="Music" class="h-full bg-black text-white">
           <iframe
@@ -45,10 +42,7 @@ const galleryUris = [
         </Section>
       </div>
       <Section title="Bio" class="bg-black text-white">
-        <div
-          class="text-md text-justify"
-          :class="{ 'text-xs': computedScreen.isMobile.value }"
-        >
+        <div class="text-justify text-xs lg:text-base">
           <p>
             A Curious, experimental and pure rock unit based out of Milan, Benthos
             presents a compelling blend of progressive metal, math and jazz rock, a real
