@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import Section from "../components/Section.vue";
 import MusicBox from "../components/MusicBox.vue";
-import { Carousel, Slide, Navigation, Pagination } from "vue3-carousel";
-import { computedScreen } from "../store/screen.store";
+import VideosSection from "./sections/VideosSection.vue";
 
-const videoIDs = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
+const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>
 
 <template>
@@ -29,24 +28,8 @@ const videoIDs = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     <Section title="Tour Dates" class="bg-egg">
       There are no tours announced at the moment.
     </Section>
-    <Section title="Singles" class="bg-white px-0">
-      <Carousel wrap-around :autoplay="5000">
-        <Slide v-for="videoID in videoIDs" :key="videoID" class="w-full">
-          <iframe
-            :width="computedScreen.isMobile.value ? 248 : 560"
-            :height="computedScreen.isMobile.value ? 140 : 315"
-            :src="`https://www.youtube.com/embed/${videoID}`"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </Slide>
-        <template #addons>
-          <Navigation />
-          <Pagination />
-        </template>
-      </Carousel>
+    <Section title="Singles" class="px-0">
+      <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
 </template>

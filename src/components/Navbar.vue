@@ -18,7 +18,9 @@ const toggleMobileNav = () => {
     <nav
       class="my-auto flex justify-between px-4 py-1.5 text-black transition-all duration-500 lg:px-16 lg:py-1"
     >
-      <img class="max-w-[180px]" src="/assets/logos/logo.svg" alt="logo" />
+      <router-link class="w-[180px]" :to="{ name: 'Home' }">
+        <img src="/assets/logos/logo.svg" alt="logo" />
+      </router-link>
       <ul v-show="!computedScreen.isMobile.value" class="flex">
         <li v-for="route in routes" class="mx-6 p-4 uppercase">
           <router-link

@@ -6,13 +6,14 @@ import Footer from "./components/Footer.vue";
 <template>
   <div>
     <Navbar
+      v-show="!$route.meta.epk"
       :routes="[
         { componentName: 'Home', displayName: 'Home' },
         { componentName: 'Gallery', displayName: 'Gallery' },
         { componentName: 'Merch', displayName: 'Merch' },
       ]"
     ></Navbar>
-    <div class="h-16 w-full"></div>
+    <div v-show="!$route.meta.epk" class="h-16 w-full"></div>
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component" />

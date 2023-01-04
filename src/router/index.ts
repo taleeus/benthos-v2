@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from "../views/Home.vue";
 import Gallery from "../views/Gallery.vue";
 import Merch from "../views/Merch.vue";
+import Epk from "../views/Epk.vue";
 
 const routes = [
   {
@@ -18,6 +19,14 @@ const routes = [
     path: "/merch",
     name: "Merch",
     component: Merch,
+  },
+  {
+    path: "/epk",
+    name: "Epk",
+    component: Epk,
+    meta: {
+      epk: true,
+    },
   },
 ];
 
