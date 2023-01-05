@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { RouteInfo } from "../types/routes.types";
-import { computedScreen } from "../store/screen.store";
+import { useScreenStore } from "../stores/useScreen";
+import { storeToRefs } from "pinia";
 
 defineProps<{
   routes: RouteInfo[];
 }>();
+
+const { isMobile } = storeToRefs(useScreenStore());
 
 const mobileNav = ref(false);
 const toggleMobileNav = () => {
@@ -21,7 +24,7 @@ const toggleMobileNav = () => {
       <router-link class="w-[180px]" :to="{ name: 'Home' }">
         <img src="/assets/logos/logo.svg" alt="logo" />
       </router-link>
-      <ul v-show="!computedScreen.isMobile.value" class="flex">
+      <ul v-show="!isMobile" class="flex">
         <li v-for="route in routes" class="mx-6 p-4 uppercase">
           <router-link
             class="no-underline hover:text-brown"
@@ -30,7 +33,7 @@ const toggleMobileNav = () => {
           >
         </li>
       </ul>
-      <div v-show="computedScreen.isMobile.value" class="relative">
+      <div v-show="isMobile" class="relative">
         <FontAwesomeIcon
           @click="toggleMobileNav"
           icon="bars"
@@ -40,7 +43,7 @@ const toggleMobileNav = () => {
       </div>
       <transition name="mobile-nav">
         <ul
-          v-show="mobileNav && computedScreen.isMobile.value"
+          v-show="mobileNav && isMobile"
           class="fixed top-2.5 left-0 flex h-full w-full max-w-[240px] flex-col bg-white font-medium"
         >
           <li class="p-4 uppercase" v-for="route in routes" @click="toggleMobileNav">

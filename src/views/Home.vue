@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Section from "../components/Section.vue";
 import MusicBox from "../components/MusicBox.vue";
-import VideosSection from "./sections/VideosSection.vue";
+import VideosSection from "../components/sections/VideosSection.vue";
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>

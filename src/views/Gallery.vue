@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Section from "../components/Section.vue";
-import VideosSection from "./sections/VideosSection.vue";
-import GallerySection from "./sections/GallerySection.vue";
+import VideosSection from "../components/sections/VideosSection.vue";
+import GallerySection from "../components/sections/GallerySection.vue";
 
 const videoIds = ["BLEeyhLwgIU", "1fHlNrLm0-c", "Wu4u3d_QbOw", "QnrbSXxpkDM"];
 const galleryUris = [
