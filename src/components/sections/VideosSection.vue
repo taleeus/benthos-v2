@@ -1,16 +1,19 @@
 <script setup lang="ts">
-import { computedScreen } from "../../store/screen.store";
+import { storeToRefs } from "pinia";
+import { useScreenStore } from "../../stores/useScreen";
 defineProps<{
   videoIds: string[];
 }>();
+
+const { isMobile } = storeToRefs(useScreenStore());
 </script>
 
 <template>
   <Carousel wrap-around :autoplay="5000">
     <Slide v-for="videoId in videoIds" :key="videoId" class="w-full">
       <iframe
-        :width="computedScreen.isMobile.value ? 248 : 1120"
-        :height="computedScreen.isMobile.value ? 140 : 630"
+        :width="isMobile ? 248 : 1120"
+        :height="isMobile ? 140 : 630"
         :src="`https://www.youtube.com/embed/${videoId}`"
         title="YouTube video player"
         frameborder="0"

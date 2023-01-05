@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { computedScreen } from "../../store/screen.store";
+import { storeToRefs } from "pinia";
+import { useScreenStore } from "../../stores/useScreen";
 import { ref } from "vue";
 
 defineProps<{
   galleryUris: string[];
 }>();
+
+const { isMobile } = storeToRefs(useScreenStore());
 
 const currentImage = ref(0);
 const slideTo = (val: number) => (currentImage.value = val);
@@ -29,7 +32,7 @@ const slideTo = (val: number) => (currentImage.value = val);
   <Carousel
     id="thumbnails"
     wrap-around
-    :items-to-show="computedScreen.isMobile.value ? 3.5 : 4.5"
+    :items-to-show="isMobile ? 3.5 : 4.5"
     v-model="currentImage"
     ref="carousel"
     class="lg:mx-32"

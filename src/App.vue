@@ -19,7 +19,7 @@ import Footer from "./components/Footer.vue";
         <component :is="Component" />
       </transition>
     </router-view>
-    <Footer></Footer>
+    <Footer v-show="!$route.meta.login"></Footer>
   </div>
 </template>
 

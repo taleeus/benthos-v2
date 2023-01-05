@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import Section from "../components/Section.vue";
-import VideosSection from "./sections/VideosSection.vue";
-import GallerySection from "./sections/GallerySection.vue";
+import VideosSection from "../components/sections/VideosSection.vue";
+import GallerySection from "../components/sections/GallerySection.vue";
 
-import { computedScreen } from "../store/screen.store";
+import { useScreenStore } from "../stores/useScreen";
+import { storeToRefs } from "pinia";
+
+const { isMobile } = storeToRefs(useScreenStore());
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 const galleryUris = [
@@ -33,8 +36,8 @@ const galleryUris = [
           <iframe
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/playlist/5PPnrtqNsvNpFy0b0UCYbp?utm_source=generator&theme=0"
-            :width="computedScreen.isMobile.value ? '100%' : 400"
-            :height="computedScreen.isMobile.value ? 400 : 635"
+            :width="isMobile ? '100%' : 400"
+            :height="isMobile ? 400 : 635"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
