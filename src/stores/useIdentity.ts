@@ -1,13 +1,19 @@
 import { defineStore } from 'pinia'
-import netlifyIdentity from 'netlify-identity-widget';
 import { ref, computed } from 'vue';
+import axios from 'axios';
 
-export const useIdentityStore = defineStore('identity', () => {
-  netlifyIdentity.init(); 
+export const useIdentityStore = defineStore('identity', () => {  
+  const currentUser = ref();
+  const isLoggedIn = computed(() => !!currentUser.value);
+
+  const login = async (loginData: { username: string, password: string }) => {
+    const response = await axios.post("/.netlify/functions/authenticateUser", loginData);
+    if (response?.status != 200) {
+      throw new Error(response?.data?.message ?? "Unknown error");
+    }
+
+    currentUser.value = response.data;
+  };
   
-  const currentUser = ref(netlifyIdentity.currentUser());
-  const isLoggedIn = computed(() => !!currentUser.value)
-  const setUser = (user: netlifyIdentity.User) => currentUser.value = user;
-  
-  return { currentUser, isLoggedIn, setUser };
+  return { currentUser, isLoggedIn, login };
 });
