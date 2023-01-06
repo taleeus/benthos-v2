@@ -1,24 +1,63 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import router from "../router";
+import { ref } from "vue";
+import Button from "../components/Button.vue";
+
 import { useIdentityStore } from "../stores/useIdentity";
-import netlifyIdentity from "netlify-identity-widget";
+import { useRouter } from "vue-router";
+import Swal from "sweetalert2";
 
-const store = useIdentityStore();
+const router = useRouter();
 
-onMounted(() => {
-  netlifyIdentity.init();
-  netlifyIdentity.open();
-  netlifyIdentity.on("error", console.error);
-  netlifyIdentity.on("login", (user) => {
-    store.setUser(user);
+const { login } = useIdentityStore();
+const username = ref("");
+const password = ref("");
+
+const tryLogin = async () => {
+  try {
+    await login({
+      username: username.value,
+      password: password.value,
+    });
+
     router.push({ name: "Epk" });
-  });
-});
+  } catch (error) {
+    Swal.fire({
+      text: (error as Error).message,
+      toast: true,
+      position: "bottom-right",
+      confirmButtonColor: "black",
+      customClass: {},
+    });
+  }
+};
 </script>
 
 <template>
-  <div class="w-full h-screen bg-black"></div>
+  <div class="flex h-screen w-full bg-black">
+    <div class="m-auto block max-h-fit max-w-sm rounded-lg bg-egg px-8 py-6 shadow-lg">
+      <form class="grid grid-cols-1 gap-6" @submit.prevent="tryLogin">
+        <label class="block">
+          <span class="text-gray-700">Username</span>
+          <input
+            type="text"
+            v-model="username"
+            class="mt-1 block w-full rounded-md border-transparent bg-gray-100 focus:border-gray-500 focus:bg-white focus:ring-0"
+          />
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Password</span>
+          <input
+            type="password"
+            v-model="password"
+            class="mt-1 block w-full rounded-md border-transparent bg-gray-100 focus:border-gray-500 focus:bg-white focus:ring-0"
+          />
+        </label>
+        <label class="ml-auto block">
+          <Button class="m-0 bg-gray-100">Login</Button>
+        </label>
+      </form>
+    </div>
+  </div>
 </template>
 
 <style scoped></style>
