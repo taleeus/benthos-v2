@@ -10,6 +10,16 @@ interface LoginDto {
 }
 
 const handler: Handler = async (_event, _context) => {
+  if (_event.httpMethod == "GET") {
+    prisma.user.findMany();
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: "Yawn 🥱",
+      }),
+    };
+  }
+  
   if (_event.httpMethod != "POST") {
     return {
       statusCode: 405,
