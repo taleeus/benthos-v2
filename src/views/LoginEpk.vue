@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Button from "../components/Button.vue";
 
 import { useIdentityStore } from "../stores/useIdentity";
@@ -8,7 +8,9 @@ import Swal from "sweetalert2";
 
 const router = useRouter();
 
-const { login } = useIdentityStore();
+const { login, wakeUpFunction } = useIdentityStore();
+onMounted(wakeUpFunction);
+
 const username = ref("");
 const password = ref("");
 
