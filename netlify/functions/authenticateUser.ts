@@ -11,7 +11,7 @@ interface LoginDto {
 
 const handler: Handler = async (_event, _context) => {
   if (_event.httpMethod == "GET") {
-    prisma.user.findMany();
+    await prisma.user.findMany();
     return {
       statusCode: 200,
       body: JSON.stringify({
