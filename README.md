@@ -10,7 +10,14 @@ Install packages by running:
 yarn
 ```
 
+Provide a Postgres database connection; we need it for the EPK login. To do this, create a `.env` file, copy the `env.template` content and fill the placeholders.
+
+Then, run Prisma Deploy to build the tables and seed them:
+```sh
+yarn prisma:deploy
+```
+
 Start the development server by running:
 ```sh
-yarn dev
+yarn netlify:dev
 ```
