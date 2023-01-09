@@ -10,7 +10,7 @@ Install packages by running:
 yarn
 ```
 
-Provide a Postgres database connection; we need it for the EPK login. To do this, create a `.env` file, copy the `env.template` content and fill the placeholders.
+Provide a Postgres database connection; we need it for the EPK login. To do this, create a `.env` file in the root of the project, copy the `env.template` content and fill the placeholders.
 
 Then, run Prisma Deploy to build the tables and seed them:
 ```sh
