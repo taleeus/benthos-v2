@@ -14,12 +14,12 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     <Section title="Music" class="bg-black text-white">
       <div class="flex flex-col justify-around lg:flex-row">
         <MusicBox
-          cover-art-url="/assets/coverArts/cover-art.jpg"
+          cover-art-url="/assets/coverArts/cover-art.avif"
           title="II"
           stream-url="https://ffm.to/bnthii"
         ></MusicBox
         ><MusicBox
-          cover-art-url="/assets/coverArts/debris-essence-bside.jpg"
+          cover-art-url="/assets/coverArts/debris-essence-bside.avif"
           title="Debris // Essence B-Side"
           stream-url="https://ffm.to/dbrs"
         ></MusicBox>

@@ -10,16 +10,16 @@ const { isMobile } = storeToRefs(useScreenStore());
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 const galleryUris = [
-  "/assets/gallery/all-slaughter-min.jpg",
-  "/assets/gallery/bside-building-min.jpg",
-  "/assets/gallery/gl-slaughter-min.jpg",
-  "/assets/gallery/pap-slaughter-min.jpg",
-  "/assets/gallery/ale-slaughter-min.jpg",
-  "/assets/gallery/heads-min.jpg",
-  "/assets/gallery/alby-slaughter-min.jpg",
-  "/assets/gallery/modena-all-min.jpg",
-  "/assets/gallery/heads-debris-min.jpg",
-  "/assets/gallery/trip-modena-min.jpg",
+  "/assets/gallery/all-slaughter.avif",
+  "/assets/gallery/bside-building.avif",
+  "/assets/gallery/gl-slaughter.avif",
+  "/assets/gallery/pap-slaughter.avif",
+  "/assets/gallery/ale-slaughter.avif",
+  "/assets/gallery/heads.avif",
+  "/assets/gallery/alby-slaughter.avif",
+  "/assets/gallery/modena-all.avif",
+  "/assets/gallery/heads-debris.avif",
+  "/assets/gallery/trip-modena.avif",
 ];
 </script>
 
@@ -30,20 +30,7 @@ const galleryUris = [
     >
       <img src="/assets/logos/logo-black.svg" alt="logo" class="opacity-75" />
     </div>
-    <div class="flex flex-col lg:flex-row-reverse">
-      <div>
-        <Section title="Music" class="h-full bg-black text-white">
-          <iframe
-            style="border-radius: 12px"
-            src="https://open.spotify.com/embed/playlist/5PPnrtqNsvNpFy0b0UCYbp?utm_source=generator&theme=0"
-            :width="isMobile ? '100%' : 400"
-            :height="isMobile ? 400 : 635"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-        </Section>
-      </div>
+    <div class="flex flex-col lg:flex-row">
       <Section title="Bio" class="bg-black text-white">
         <div class="text-justify text-xs lg:text-base">
           <p>
@@ -87,6 +74,19 @@ const galleryUris = [
           </p>
         </div>
       </Section>
+      <div>
+        <Section title="Music" class="h-full bg-black text-white">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/5PPnrtqNsvNpFy0b0UCYbp?utm_source=generator&theme=0"
+            :width="isMobile ? '100%' : 400"
+            :height="isMobile ? 400 : 635"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </Section>
+      </div>
     </div>
     <Section title="Singles" class="bg-egg px-0">
       <VideosSection :video-ids="videoIds"></VideosSection>

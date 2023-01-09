@@ -9,11 +9,11 @@ const { isMobile } = storeToRefs(useScreenStore());
 </script>
 
 <template>
-  <Carousel wrap-around :autoplay="5000">
+  <Carousel wrap-around>
     <Slide v-for="videoId in videoIds" :key="videoId" class="w-full">
       <iframe
-        :width="isMobile ? 248 : 1120"
-        :height="isMobile ? 140 : 630"
+        :width="isMobile ? 248 : 800"
+        :height="isMobile ? 140 : 450"
         :src="`https://www.youtube.com/embed/${videoId}`"
         title="YouTube video player"
         frameborder="0"

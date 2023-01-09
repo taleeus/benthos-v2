@@ -23,7 +23,7 @@ module.exports = {
         white: '#f0efeb',
       },
       backgroundImage: {
-        'debris-bside-gradient': 'linear-gradient(to bottom, rgba(240, 239, 235, 0.3), rgb(0, 0, 0)), url("/assets/backgrounds/debris-bside-min.jpg");'
+        'debris-bside-gradient': 'linear-gradient(to bottom, rgba(240, 239, 235, 0.3), rgb(0, 0, 0)), url("/assets/backgrounds/debris-bside.avif");'
       },
       screens: {
         'mobile': '320px',
