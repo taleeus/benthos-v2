@@ -9,6 +9,8 @@ import Swal from "sweetalert2";
 const router = useRouter();
 
 const { login, wakeUpFunction } = useIdentityStore();
+
+// ୧༼ಠ益ಠ༽︻╦╤─ Waking up lambda function and database
 onMounted(wakeUpFunction);
 
 const username = ref("");
@@ -28,6 +30,7 @@ const tryLogin = async () => {
       toast: true,
       position: "bottom-right",
       confirmButtonColor: "black",
+      // Overriding default swal2 class
       customClass: {},
     });
   }

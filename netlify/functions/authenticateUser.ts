@@ -10,7 +10,9 @@ interface LoginDto {
 }
 
 const handler: Handler = async (_event, _context) => {
+  // Seems silly, but we need to wake the function and the database up or it will take 2 seconds or more 	ʕノ•ᴥ•ʔノ ︵ ┻━┻
   if (_event.httpMethod == "GET") {
+    // Empty SELECT to wake this bad boy up
     await prisma.user.findMany();
     return {
       statusCode: 200,
