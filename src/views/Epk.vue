@@ -26,9 +26,9 @@ const galleryUris = [
 <template>
   <div>
     <div
-      class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top px-8 transition-all duration-500 lg:h-[48rem] lg:px-32"
+      class="h-[35vh] w-full bg-debris-bside-gradient-epk bg-cover bg-top px-8 transition-all duration-500 lg:h-[48rem] lg:px-32"
     >
-      <img src="/assets/logos/logo-black.svg" alt="logo" class="opacity-75" />
+      <img src="/assets/logos/logo-black.svg" alt="logo" class="opacity-80" />
     </div>
     <div class="flex flex-col lg:flex-row">
       <Section title="Bio" class="bg-black text-white">
