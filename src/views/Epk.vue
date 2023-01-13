@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EpkBanner from "../components/EpkBanner.vue";
 import Section from "../components/Section.vue";
 import VideosSection from "../components/sections/VideosSection.vue";
 import GallerySection from "../components/sections/GallerySection.vue";
@@ -25,11 +26,11 @@ const galleryUris = [
 
 <template>
   <div>
+    <EpkBanner></EpkBanner>
+    <div class="h-16 w-full"></div>
     <div
-      class="h-[35vh] w-full bg-debris-bside-gradient-epk bg-cover bg-top px-8 transition-all duration-500 lg:h-[48rem] lg:px-32"
-    >
-      <img src="/assets/logos/logo-black.svg" alt="logo" class="opacity-80" />
-    </div>
+      class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top px-8 transition-all duration-500 lg:h-[48rem] lg:px-32"
+    ></div>
     <div class="flex flex-col lg:flex-row">
       <Section title="Bio" class="bg-black text-white">
         <div class="text-justify text-xs lg:text-base">
@@ -47,21 +48,21 @@ const galleryUris = [
             “II” which impressed the metal and progressive community.
           </p>
           <br /><br />
-          <p>
+          <p class="italic">
             “Benthos set an exclamation point in the international progressive metal scene
             with II. With a flawless sound, innovative ideas and familiar aspects the
             Italians have proven that they can also compete on an international level” -
             MoreCore.De
           </p>
           <br />
-          <p>
+          <p class="italic">
             “Benthos will have to be measured against this debut album in the future,
             although they certainly are not afraid of it. These are probably such creative
             minds who walk around with a note and a pen in order to be able to write down
             all song ideas immediately” - Time For Metal.De
           </p>
           <br />
-          <p>
+          <p class="italic">
             “Exploring the outer fringes of musical convention and coming dangerously
             close to redefining the concept of progressive metal, a bold new player
             emerges from the Italian peninsula with a short yet gargantuan stylistic
