@@ -119,4 +119,8 @@ const galleryUris = [
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+a:hover {
+  color: #eae8d7;
+}
+</style>

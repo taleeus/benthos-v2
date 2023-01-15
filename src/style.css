@@ -24,10 +24,7 @@ body {
 
 a {
   font-weight: 600;
-}
-
-a:hover {
-  color: #eae8d7;
+  transition: all 0.3s ease-in-out;
 }
 
 h1 {
