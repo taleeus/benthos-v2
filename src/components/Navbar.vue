@@ -46,10 +46,16 @@ const toggleMobileNav = () => {
           v-show="mobileNav && isMobile"
           class="fixed top-2.5 left-0 flex h-full w-full max-w-[240px] flex-col bg-white font-medium"
         >
-          <li class="p-4 uppercase" v-for="route in routes" @click="toggleMobileNav">
-            <router-link class="no-underline" :to="{ name: `${route.componentName}` }">{{
-              route.displayName
-            }}</router-link>
+          <li
+            class="p-4 uppercase"
+            v-for="route in routes"
+            @click="toggleMobileNav"
+          >
+            <router-link
+              class="no-underline"
+              :to="{ name: `${route.componentName}` }"
+              >{{ route.displayName }}</router-link
+            >
           </li>
         </ul>
       </transition>
@@ -58,6 +64,11 @@ const toggleMobileNav = () => {
 </template>
 
 <style lang="scss" scoped>
+a {
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
 .mobile-nav-enter-active,
 .mobile-nav-leave-active {
   transition: 0.5s ease all;

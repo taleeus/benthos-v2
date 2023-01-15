@@ -37,7 +37,7 @@ const galleryUris = [
           <p>
             A curious, experimental, pure rock unit based out of Milan, Benthos
             present a compelling blend of progressive metal, math, and jazz-rock
-            -- a real universe of sound which you must hear to believe.
+            — a real universe of sound which you must hear to believe.
           </p>
           <br />
           <p>
@@ -66,7 +66,7 @@ const galleryUris = [
             “Benthos set an exclamation point in the international progressive
             metal scene with II. With a flawless sound, innovative ideas and
             familiar aspects the Italians have proven that they can also compete
-            on an international level” -
+            on an international level” —
             <a href="https://www.morecore.de/review/benthos/ii/" target="_blank"
               >MoreCore.De</a
             >
@@ -76,7 +76,7 @@ const galleryUris = [
             “Benthos will have to be measured against this debut album in the
             future, although they certainly are not afraid of it. These are
             probably such creative minds who walk around with a note and a pen
-            in order to be able to write down all song ideas immediately” -
+            in order to be able to write down all song ideas immediately” —
             <a href="https://time-for-metal.eu/benthos-ii/" target="_blank"
               >Time For Metal</a
             >
@@ -86,7 +86,7 @@ const galleryUris = [
             “Exploring the outer fringes of musical convention and coming
             dangerously close to redefining the concept of progressive metal, a
             bold new player emerges from the Italian peninsula with a short yet
-            gargantuan stylistic excursion of a debut” -
+            gargantuan stylistic excursion of a debut” —
             <a
               href="https://www.sonicperspectives.com/album-reviews/benthos-ii/"
               target="_blank"

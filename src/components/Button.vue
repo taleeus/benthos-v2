@@ -13,4 +13,10 @@ defineProps<{
   </button>
 </template>
 
-<style scoped></style>
+<style scoped>
+button {
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 1.5rem;
+  font-weight: 400;
+}
+</style>

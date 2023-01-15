@@ -8,7 +8,7 @@
       rel="noopener noreferrer"
       ><FontAwesomeIcon
         icon="fa-brands fa-spotify"
-        class="hover:text-cream"
+        class="transition hover:text-cream"
       ></FontAwesomeIcon
     ></a>
     <a
@@ -17,7 +17,7 @@
       rel="noopener noreferrer"
       ><FontAwesomeIcon
         icon="fa-brands fa-instagram"
-        class="hover:text-cream"
+        class="transition hover:text-cream"
       ></FontAwesomeIcon
     ></a>
     <a
@@ -26,7 +26,7 @@
       rel="noopener noreferrer"
       ><FontAwesomeIcon
         icon="fa-brands fa-facebook"
-        class="hover:text-cream"
+        class="transition hover:text-cream"
       ></FontAwesomeIcon
     ></a>
     <a
@@ -36,13 +36,20 @@
     >
       <FontAwesomeIcon
         icon="fa-brands fa-youtube"
-        class="hover:text-cream"
+        class="transition hover:text-cream"
       ></FontAwesomeIcon
     ></a>
     <a href="mailto:benthos.milano@gmail.com"
-      ><FontAwesomeIcon icon="envelope" class="hover:text-cream"></FontAwesomeIcon
+      ><FontAwesomeIcon
+        icon="envelope"
+        class="transition hover:text-cream"
+      ></FontAwesomeIcon
     ></a>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+</style>
