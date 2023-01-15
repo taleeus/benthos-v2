@@ -35,44 +35,65 @@ const galleryUris = [
       <Section title="Bio" class="bg-black text-white">
         <div class="text-justify text-xs lg:text-base">
           <p>
-            A Curious, experimental and pure rock unit based out of Milan, Benthos
-            presents a compelling blend of progressive metal, math and jazz rock, a real
-            universe of sound which you must hear to believe. The band appears for the
-            first as a support act for THE CONTORTIONIST in early 2019, and suddenly the
-            band caught the Italian’s scene attention.
+            A curious, experimental, pure rock unit based out of Milan, Benthos
+            present a compelling blend of progressive metal, math, and jazz-rock
+            -- a real universe of sound which you must hear to believe.
           </p>
           <br />
           <p>
-            In 2020 the band was forced to work at home due to the Covid-19 but the first
-            album took shape and in 2021 Eclipse Records released their debut album titled
-            “II” which impressed the metal and progressive community.
-          </p>
-          <br /><br />
-          <p class="italic">
-            “Benthos set an exclamation point in the international progressive metal scene
-            with II. With a flawless sound, innovative ideas and familiar aspects the
-            Italians have proven that they can also compete on an international level” -
-            MoreCore.De
+            The band performed live on stage for the first time as a support act
+            for <strong>The Contortionist</strong> in early 2019, and suddenly
+            caught the Italian’s scene attention.
           </p>
           <br />
-          <p class="italic">
-            “Benthos will have to be measured against this debut album in the future,
-            although they certainly are not afraid of it. These are probably such creative
-            minds who walk around with a note and a pen in order to be able to write down
-            all song ideas immediately” - Time For Metal.De
-          </p>
-          <br />
-          <p class="italic">
-            “Exploring the outer fringes of musical convention and coming dangerously
-            close to redefining the concept of progressive metal, a bold new player
-            emerges from the Italian peninsula with a short yet gargantuan stylistic
-            excursion of a debut” - Sonic Perspective.
-          </p>
-          <br /><br />
           <p>
-            In 2021 Benthos announced their first tour around Europe called “The Essence
-            Tour”.
+            In 2020 Benthos were forced to work at home due to Covid-19, but
+            despite the restrictive circumstances, the first album took shape.
+            In 2021, American label
+            <a href="https://www.eclipserecords.com/" target="_blank"
+              >Eclipse Records</a
+            >
+            released the band's debut album titled “II”, which impressed the
+            metal and progressive community worldwide.
           </p>
+          <br />
+          <p>
+            In 2022, Benthos toured around Europe for the “The Essence Tour”,
+            playing in venues across Italy, Germany, and Hungary.
+          </p>
+          <br />
+          <p class="italic">
+            “Benthos set an exclamation point in the international progressive
+            metal scene with II. With a flawless sound, innovative ideas and
+            familiar aspects the Italians have proven that they can also compete
+            on an international level” -
+            <a href="https://www.morecore.de/review/benthos/ii/" target="_blank"
+              >MoreCore.De</a
+            >
+          </p>
+          <br />
+          <p class="italic">
+            “Benthos will have to be measured against this debut album in the
+            future, although they certainly are not afraid of it. These are
+            probably such creative minds who walk around with a note and a pen
+            in order to be able to write down all song ideas immediately” -
+            <a href="https://time-for-metal.eu/benthos-ii/" target="_blank"
+              >Time For Metal</a
+            >
+          </p>
+          <br />
+          <p class="italic">
+            “Exploring the outer fringes of musical convention and coming
+            dangerously close to redefining the concept of progressive metal, a
+            bold new player emerges from the Italian peninsula with a short yet
+            gargantuan stylistic excursion of a debut” -
+            <a
+              href="https://www.sonicperspectives.com/album-reviews/benthos-ii/"
+              target="_blank"
+              >Sonic Perspective</a
+            >
+          </p>
+          <br /><br />
         </div>
       </Section>
       <div>
@@ -83,7 +104,7 @@ const galleryUris = [
             :width="isMobile ? '100%' : 400"
             :height="isMobile ? 400 : 635"
             frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            allow="autoplay; clipboappears for the first asard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
         </Section>
