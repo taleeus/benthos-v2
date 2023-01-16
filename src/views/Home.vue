@@ -7,6 +7,11 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>
 
 <template>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/vue2-animate/dist/vue2-animate.min.css"
+  />
+
   <div>
     <div
       class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top transition-all duration-500 lg:h-[48rem]"
@@ -16,6 +21,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         <MusicBox
           cover-art-url="/assets/coverArts/cover-art.avif"
           title="II"
+          style="animation-duration: 0.3s"
           stream-url="https://ffm.to/bnthii"
         ></MusicBox
         ><MusicBox

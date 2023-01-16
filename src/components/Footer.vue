@@ -49,6 +49,9 @@
 </template>
 
 <style scoped>
+.bg-black {
+  background-color: #191919;
+}
 .transition {
   transition: all 0.3s ease-in-out;
 }

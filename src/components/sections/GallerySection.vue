@@ -23,7 +23,7 @@ const slideTo = (val: number) => (currentImage.value = val);
   >
     <Slide v-for="image of galleryUris" :key="image">
       <div
-        class="flex h-[9rem] w-[16rem] items-center justify-center lg:h-[18rem] lg:w-[32rem]"
+        class="flex h-[9rem] w-[16rem] items-center justify-center lg:h-[28rem] lg:w-[62rem]"
       >
         <img :src="image" class="min-h-full" />
       </div>
@@ -39,7 +39,7 @@ const slideTo = (val: number) => (currentImage.value = val);
   >
     <Slide v-for="image of galleryUris" :key="image">
       <div
-        class="flex h-[2.7rem] w-[4.8rem] items-center justify-center lg:h-[9rem] lg:w-[16rem]"
+        class="flex h-[2.7rem] w-[4.8rem] cursor-pointer items-center justify-center lg:h-[9rem] lg:w-[16rem]"
         @click="slideTo(galleryUris.indexOf(image))"
       >
         <img :src="image" class="min-h-full" />
