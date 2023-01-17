@@ -12,9 +12,9 @@ const galleryUris = [
   "/assets/gallery/ale-slaughter.avif",
   "/assets/gallery/heads.avif",
   "/assets/gallery/alby-slaughter.avif",
-  "/assets/gallery/modena-all.avif",
+  "/assets/gallery/all-modena.avif",
   "/assets/gallery/heads-debris.avif",
-  "/assets/gallery/trip-modena.avif",
+  "/assets/gallery/trip-slaughter.avif",
 ];
 </script>
 
