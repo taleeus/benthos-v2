@@ -41,7 +41,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         >
       </div>
     </Section>
-    <Section title="Singles" class="grain-bg px-0">
+    <Section title="Singles" class="bg-grain px-0">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
