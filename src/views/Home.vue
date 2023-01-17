@@ -7,11 +7,6 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>
 
 <template>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/vue2-animate/dist/vue2-animate.min.css"
-  />
-
   <div>
     <div
       class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top lg:h-[48rem]"
