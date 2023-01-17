@@ -14,17 +14,17 @@ defineProps<{
     rel="noopener noreferrer"
     class="rounded-md"
   >
-    <div class="p-2 text-sm uppercase lg:p-8 lg:text-2xl">
+    <div class="p-6 text-xl uppercase lg:p-8 lg:text-2xl">
       <div
-        class="flex h-[6rem] w-[6rem] items-center justify-center lg:h-[20rem] lg:w-[20rem]"
+        class="flex h-[12rem] w-[12rem] items-center justify-center lg:h-[20rem] lg:w-[20rem]"
       >
         <img
           :src="imageUrl"
-          class="mt-5 mb-10 transition hover:scale-105 hover:opacity-95"
+          class="transition hover:scale-105 hover:opacity-95"
         />
       </div>
       {{ title }}
-      <div class="text-xs lg:text-base">
+      <div class="text-sm lg:text-base">
         {{ price }}
       </div>
     </div>
