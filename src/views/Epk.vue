@@ -125,8 +125,7 @@ const galleryUris = [
         </Section>
       </div>
     </div>
-    <Section title="Singles" class="wrapper bg-white px-0">
-      <div class="content"></div>
+    <Section title="Singles" class="grain-bg bg-white px-0">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
     <Section title="Gallery" class="bg-white">
@@ -154,19 +153,8 @@ a {
 a:hover {
   color: #e5cb98;
 }
-.wrapper {
-  position: relative;
-}
-.content {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../public/assets/backgrounds/grain-bg.jpg");
-  opacity: 0.5;
-  background-size: cover;
+.grain-bg {
+  background-image: url("../../public/assets/backgrounds/grain-bg.png");
 }
 .reviews > p {
   padding-left: 1rem;

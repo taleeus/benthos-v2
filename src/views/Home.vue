@@ -41,8 +41,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         >
       </div>
     </Section>
-    <Section title="Singles" class="wrapper px-0">
-      <div class="content"></div>
+    <Section title="Singles" class="grain-bg px-0">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
@@ -72,18 +71,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 .tour-button:hover {
   background-color: #e5cb98;
 }
-.wrapper {
-  position: relative;
-}
-.content {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../public/assets/backgrounds/grain-bg.jpg");
-  opacity: 0.5;
-  background-size: cover;
+.grain-bg {
+  background-image: url("../../public/assets/backgrounds/grain-bg.png");
 }
 </style>
