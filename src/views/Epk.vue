@@ -153,9 +153,7 @@ a {
 a:hover {
   color: #e5cb98;
 }
-.grain-bg {
-  background-image: url("../../public/assets/backgrounds/grain-bg.png");
-}
+
 .reviews > p {
   padding-left: 1rem;
   border-left: solid 2px #e5cb98;

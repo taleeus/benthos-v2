@@ -56,9 +56,6 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     ),
     url(/assets/backgrounds/debris-bside.avif);
 }
-.bg-black {
-  background-color: rgb(21 21 21);
-}
 
 .tour-button {
   background-color: rgb(190, 190, 190);
@@ -70,8 +67,5 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 
 .tour-button:hover {
   background-color: #e5cb98;
-}
-.grain-bg {
-  background-image: url("../../public/assets/backgrounds/grain-bg.png");
 }
 </style>
