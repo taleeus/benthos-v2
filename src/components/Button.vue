@@ -17,4 +17,7 @@ defineProps<{
 button {
   transition: all 0.3s ease-in-out;
 }
+button:hover {
+  background-color: #e5cb98;
+}
 </style>

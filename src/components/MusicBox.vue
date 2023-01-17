@@ -19,7 +19,7 @@ const openStream = () => {
       <img
         :src="coverArtUrl"
         :alt="coverArtAlt"
-        class="my-4 mr-4 h-auto w-32 rounded-md transition hover:scale-110 lg:w-60"
+        class="m-4 h-auto w-32 rounded-md transition hover:scale-110 lg:w-80"
       />
     </a>
     <div
