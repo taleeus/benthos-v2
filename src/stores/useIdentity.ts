@@ -8,12 +8,12 @@ export const useIdentityStore = defineStore('identity', () => {
 
   const functionUri = "/.netlify/functions/authenticateUser";
   const login = async (loginData: { username: string, password: string }) => {
-    const response = await axios.post(functionUri, loginData);
-    if (response?.status != 200) {
-      throw new Error(response?.data?.message ?? "Unknown error");
+    try {
+      const response = await axios.post(functionUri, loginData);
+      currentUser.value = response.data;
+    } catch (error: any) {
+      throw new Error(error.response?.data?.message ?? error.message);
     }
-
-    currentUser.value = response.data;
   };
 
   const wakeUpFunction = () => axios.get(functionUri);

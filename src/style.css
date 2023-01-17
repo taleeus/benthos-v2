@@ -36,5 +36,6 @@ h1 {
 }
 
 .bg-grain {
-  background-image: url("/assets/backgrounds/grain-bg.png");
+  background-image: url(/assets/backgrounds/grain-bg.png);
+  background-size: cover;
 }

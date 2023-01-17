@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useScreenStore } from "../../stores/useScreen";
 import { ref } from "vue";
 
 defineProps<{
   galleryUris: string[];
 }>();
-
-const { isMobile } = storeToRefs(useScreenStore());
 
 const currentImage = ref(0);
 const slideTo = (val: number) => (currentImage.value = val);
@@ -23,7 +19,7 @@ const slideTo = (val: number) => (currentImage.value = val);
   >
     <Slide v-for="image of galleryUris" :key="image">
       <div
-        class="flex h-[9rem] w-[16rem] items-center justify-center lg:h-[28rem] lg:w-[62rem]"
+        class="flex h-[9rem] w-[16rem] items-center justify-center lg:h-[27rem] lg:w-[48rem]"
       >
         <img :src="image" class="min-h-full" />
       </div>
@@ -32,10 +28,9 @@ const slideTo = (val: number) => (currentImage.value = val);
   <Carousel
     id="thumbnails"
     wrap-around
-    :items-to-show="isMobile ? 3.5 : 4.5"
+    items-to-show="4"
     v-model="currentImage"
     ref="carousel"
-    class="lg:mx-32"
   >
     <Slide v-for="image of galleryUris" :key="image">
       <div
