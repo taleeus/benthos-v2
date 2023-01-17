@@ -24,13 +24,17 @@ body {
 
 a {
   font-weight: 600;
-}
-
-a:hover {
-  cursor: pointer;
-  color: #eae8d7;
+  transition: all 0.3s ease-in-out;
 }
 
 h1 {
   font-weight: 400;
+}
+
+.bg-black {
+  background-color: rgb(21 21 21);
+}
+
+.bg-grain {
+  background-image: url("../../public/assets/backgrounds/grain-bg.png");
 }
