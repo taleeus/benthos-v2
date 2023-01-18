@@ -27,7 +27,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     </Section>
     <Section
       title="Tour Dates"
-      class="flex-col bg-black bg-tour bg-cover bg-center pb-14 pt-14 text-white lg:bg-center lg:py-32"
+      class="flex-col bg-black bg-tour bg-cover bg-center pb-14 pt-14 text-white lg:bg-center lg:py-28"
     >
       There are no tours announced at the moment.
       <div class="my-10">
