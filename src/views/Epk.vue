@@ -18,9 +18,9 @@ const galleryUris = [
   "/assets/gallery/ale-slaughter.avif",
   "/assets/gallery/heads.avif",
   "/assets/gallery/alby-slaughter.avif",
-  "/assets/gallery/modena-all.avif",
+  "/assets/gallery/all-modena.avif",
   "/assets/gallery/heads-debris.avif",
-  "/assets/gallery/trip-modena.avif",
+  "/assets/gallery/trip-slaughter.avif",
 ];
 </script>
 
@@ -42,7 +42,8 @@ const galleryUris = [
           <br />
           <p>
             The band performed live on stage for the first time as a support act
-            for <strong>The Contortionist</strong> in early 2019, and suddenly
+            for
+            <strong>The Contortionist</strong> in early 2019, and suddenly
             caught the Italian’s scene attention.
           </p>
           <br />
