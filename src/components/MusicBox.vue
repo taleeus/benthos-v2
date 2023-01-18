@@ -19,7 +19,7 @@ const openStream = () => {
       <img
         :src="coverArtUrl"
         :alt="coverArtAlt"
-        class="m-4 h-auto w-32 rounded-md transition hover:scale-110 lg:w-80"
+        class="m-4 h-auto w-32 rounded-md transition-all duration-500 hover:scale-110 lg:w-80"
       />
     </a>
     <div
@@ -31,8 +31,4 @@ const openStream = () => {
   </div>
 </template>
 
-<style scoped>
-.transition {
-  transition: all 0.4s ease-in-out;
-}
-</style>
+<style scoped></style>

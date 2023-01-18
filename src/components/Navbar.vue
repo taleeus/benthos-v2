@@ -64,11 +64,6 @@ const toggleMobileNav = () => {
 </template>
 
 <style lang="scss" scoped>
-a {
-  transition: all 0.3s ease-in-out;
-  font-weight: 500;
-}
-
 .mobile-nav-enter-active,
 .mobile-nav-leave-active {
   transition: 0.5s ease all;

@@ -31,36 +31,15 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         <a
           href="https://www.songkick.com/artists/5048318-benthos"
           target="_blank"
-          class="tour-button"
+          class="rounded-lg bg-lightGrey py-4 px-6 font-medium uppercase hover:bg-cream"
           >Track our shows</a
         >
       </div>
     </Section>
-    <Section title="Singles" class="bg-grain px-0">
+    <Section title="Singles" class="bg-grain bg-cover px-0">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
 </template>
 
-<style scoped>
-.bg-debris-bside-gradient {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(240, 239, 235, 0.3),
-      rgb(21, 21, 21)
-    ),
-    url(/assets/backgrounds/debris-bside.avif);
-}
-
-.tour-button {
-  background-color: rgb(190, 190, 190);
-  padding: 1rem 1.4rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  border-radius: 0.5rem;
-}
-
-.tour-button:hover {
-  background-color: #e5cb98;
-}
-</style>
+<style scoped></style>
