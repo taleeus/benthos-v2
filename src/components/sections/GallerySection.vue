@@ -19,7 +19,7 @@ const slideTo = (val: number) => (currentImage.value = val);
   >
     <Slide v-for="image of galleryUris" :key="image">
       <div
-        class="flex h-[9rem] w-[16rem] items-center justify-center lg:h-[27rem] lg:w-[48rem]"
+        class="flex h-[9rem] w-[16rem] items-center justify-center md:h-[18rem] md:w-[32rem] lg:h-[27rem] lg:w-[48rem]"
       >
         <img :src="image" class="min-h-full" />
       </div>
