@@ -25,6 +25,7 @@ module.exports = {
         "debris-bside-gradient":
           'linear-gradient(to bottom, rgba(240, 239, 235, 0.3), rgb(21, 21, 21)), url("/assets/backgrounds/debris-bside.avif");',
         grain: "url(/assets/backgrounds/grain-bg.png);",
+        tour: "url(/assets/backgrounds/tour-bg.png);",
       },
       transitionDuration: {
         400: "400ms",
