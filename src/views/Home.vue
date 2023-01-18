@@ -12,7 +12,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
       class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top lg:h-[48rem]"
     ></div>
     <Section title="Music" class="bg-black text-white">
-      <div class="flex flex-col justify-around lg:flex-row">
+      <div class="flex justify-around lg:flex-row">
         <MusicBox
           cover-art-url="/assets/coverArts/cover-art.avif"
           title="II"

@@ -15,7 +15,7 @@ const openStream = () => {
 
 <template>
   <div
-    class="flex w-full items-center justify-between gap-10 drop-shadow-md lg:gap-0"
+    class="flex w-full items-center justify-between gap-10 drop-shadow-md md:gap-4 lg:gap-0"
   >
     <a :href="$props.streamUrl" target="_blank" rel="noopener noreferrer">
       <img
