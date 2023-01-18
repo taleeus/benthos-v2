@@ -11,7 +11,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     <div
       class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top lg:h-[48rem]"
     ></div>
-    <Section title="Music" class="bg-black pb-16 text-white lg:py-20">
+    <Section title="Music" class="bg-black pb-16 text-white">
       <div class="justify-around md:flex lg:flex-row">
         <MusicBox
           cover-art-url="/assets/coverArts/cover-art.avif"
@@ -27,7 +27,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     </Section>
     <Section
       title="Tour Dates"
-      class="flex-col bg-black bg-tour bg-cover bg-center pb-14 pt-14 text-white lg:bg-center lg:py-28"
+      class="flex-col bg-black bg-tour bg-cover bg-center pb-14 pt-14 text-white lg:bg-center"
     >
       There are no tours announced at the moment.
       <div class="my-10">
