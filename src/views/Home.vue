@@ -27,13 +27,14 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     </Section>
     <Section
       title="Tour Dates"
-      class="flex-col bg-black bg-tour bg-cover bg-center pb-14 pt-14 text-white lg:bg-center"
+      class="flex-col bg-black bg-tour bg-cover bg-center text-white lg:bg-center"
     >
       There are no tours announced at the moment.
       <div class="my-10">
         <a
           href="https://www.songkick.com/artists/5048318-benthos"
           target="_blank"
+          rel="noopener noreferrer"
           class="rounded-lg bg-white py-4 px-6 font-medium uppercase text-black hover:bg-lightGrey"
           >Track our shows</a
         >
