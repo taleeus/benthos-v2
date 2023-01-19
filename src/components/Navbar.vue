@@ -27,7 +27,7 @@ const toggleMobileNav = () => {
       <ul v-show="!isMobile" class="flex">
         <li v-for="route in routes" class="mx-6 p-4 uppercase">
           <router-link
-            class="no-underline hover:text-brown"
+            class="font-medium no-underline hover:text-brown"
             :to="{ name: `${route.componentName}` }"
             >{{ route.displayName }}</router-link
           >
