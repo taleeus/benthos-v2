@@ -30,12 +30,3 @@ a {
 h1 {
   font-weight: 400;
 }
-
-.bg-black {
-  background-color: rgb(21 21 21);
-}
-
-.bg-grain {
-  background-image: url(/assets/backgrounds/grain-bg.png);
-  background-size: cover;
-}

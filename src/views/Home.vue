@@ -11,8 +11,8 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     <div
       class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top lg:h-[48rem]"
     ></div>
-    <Section title="Music" class="bg-black text-white">
-      <div class="flex flex-col justify-around lg:flex-row">
+    <Section title="Music" class="bg-black pb-16 text-white">
+      <div class="justify-around md:flex lg:flex-row">
         <MusicBox
           cover-art-url="/assets/coverArts/cover-art.avif"
           title="II"
@@ -25,42 +25,24 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         ></MusicBox>
       </div>
     </Section>
-    <Section title="Tour Dates" class="flex-col bg-white">
+    <Section
+      title="Tour Dates"
+      class="flex-col bg-black bg-tour bg-cover bg-center pb-14 pt-14 text-white lg:bg-center"
+    >
       There are no tours announced at the moment.
       <div class="my-10">
         <a
           href="https://www.songkick.com/artists/5048318-benthos"
           target="_blank"
-          class="tour-button"
+          class="rounded-lg bg-white py-4 px-6 font-medium uppercase text-black hover:bg-lightGrey"
           >Track our shows</a
         >
       </div>
     </Section>
-    <Section title="Singles" class="bg-grain px-0">
+    <Section title="Singles" class="bg-grain bg-cover px-0 pb-20 pt-12">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
 </template>
 
-<style scoped>
-.bg-debris-bside-gradient {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(240, 239, 235, 0.3),
-      rgb(21, 21, 21)
-    ),
-    url(/assets/backgrounds/debris-bside.avif);
-}
-
-.tour-button {
-  background-color: rgb(190, 190, 190);
-  padding: 1rem 1.4rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  border-radius: 0.5rem;
-}
-
-.tour-button:hover {
-  background-color: #e5cb98;
-}
-</style>
+<style scoped></style>

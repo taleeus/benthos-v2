@@ -20,7 +20,7 @@ defineProps<{
       >
         <img
           :src="imageUrl"
-          class="transition hover:scale-105 hover:opacity-95"
+          class="transition-all duration-400 hover:scale-105 hover:opacity-95"
         />
       </div>
       {{ title }}
@@ -31,8 +31,4 @@ defineProps<{
   </a>
 </template>
 
-<style scoped>
-.transition {
-  transition: all 0.3s ease-in-out;
-}
-</style>
+<style scoped></style>

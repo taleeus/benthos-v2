@@ -65,7 +65,7 @@ const teespringArticles = [
         ></MerchBox>
       </div>
     </Section>
-    <Section title="Teespring" class="bg-grain bg-white">
+    <Section title="Teespring" class="bg-white bg-grain bg-cover">
       <div class="flex flex-row flex-wrap justify-around">
         <MerchBox
           class="m-4 bg-[#f6f6f8]"
