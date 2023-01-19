@@ -38,9 +38,15 @@ const tryLogin = async () => {
 </script>
 
 <template>
-  <div class="bg-grain flex h-screen w-full bg-black">
-    <div class="m-auto block max-h-fit max-w-sm rounded-lg bg-white px-8 py-6 shadow-lg">
-      <img src="/assets/logos/logo-black.svg" alt="Benthos Logo" class="mb-5" />
+  <div class="flex h-screen w-full bg-black bg-grain bg-cover">
+    <div
+      class="m-auto block max-h-fit max-w-sm rounded-lg bg-white px-8 py-6 shadow-lg"
+    >
+      <img
+        src="../../public/assets/logos/logo-black.svg"
+        alt="Benthos Logo"
+        class="mb-5"
+      />
       <form class="grid grid-cols-1 gap-6" @submit.prevent="tryLogin">
         <label class="block">
           <span class="text-gray-700">Username</span>
@@ -59,19 +65,13 @@ const tryLogin = async () => {
           />
         </label>
         <label class="ml-auto block">
-          <Button class="button m-0 bg-gray-100">Login</Button>
+          <Button class="m-0 bg-gray-100 hover:bg-black hover:text-white"
+            >Login</Button
+          >
         </label>
       </form>
     </div>
   </div>
 </template>
 
-<style scoped>
-.bg-black {
-  background-color: #191919;
-}
-.button:hover {
-  background-color: #191919;
-  color: white;
-}
-</style>
+<style scoped></style>

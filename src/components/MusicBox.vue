@@ -14,12 +14,14 @@ const openStream = () => {
 </script>
 
 <template>
-  <div class="flex w-full items-center justify-between drop-shadow-md">
+  <div
+    class="flex w-full items-center justify-between gap-10 drop-shadow-md md:gap-4 lg:gap-0"
+  >
     <a :href="$props.streamUrl" target="_blank" rel="noopener noreferrer">
       <img
         :src="coverArtUrl"
         :alt="coverArtAlt"
-        class="m-4 h-auto w-32 rounded-md transition hover:scale-110 lg:w-80"
+        class="m-4 h-auto w-32 rounded-md transition-all duration-500 hover:scale-110 lg:w-80"
       />
     </a>
     <div
@@ -31,8 +33,4 @@ const openStream = () => {
   </div>
 </template>
 
-<style scoped>
-.transition {
-  transition: all 0.4s ease-in-out;
-}
-</style>
+<style scoped></style>
