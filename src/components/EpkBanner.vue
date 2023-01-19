@@ -15,11 +15,14 @@ const { isMobile } = storeToRefs(useScreenStore());
       </div>
       <ul class="flex">
         <li class="m-auto px-5 uppercase lg:mx-6 lg:p-4">
-          <a href="mailto:benthos.milano@gmail.com" class="no-underline hover:text-brown">
+          <a
+            href="mailto:benthos.milano@gmail.com"
+            class="font-medium no-underline hover:text-brown"
+          >
             <div class="flex flex-row">
               <FontAwesomeIcon
                 icon="envelope"
-                class="m-auto text-2xl lg:mx-2 lg:text-base"
+                class="m-auto text-2xl md:mx-2 lg:mx-2 lg:text-base"
               ></FontAwesomeIcon>
               <div v-show="!isMobile">Contact Us</div>
             </div>
