@@ -14,12 +14,12 @@ const { isMobile } = storeToRefs(useScreenStore());
       <iframe
         :width="isMobile ? 248 : 800"
         :height="isMobile ? 140 : 450"
-        :src="`https://www.youtube.com/embed/${videoId}`"
+        :src="`https://www.youtube.com/embed/${videoId}?modestbranding=1`"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        controls="0"
+        rel="0"
         loading="lazy"
       ></iframe>
     </Slide>
