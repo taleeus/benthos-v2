@@ -6,7 +6,9 @@ const { isMobile } = storeToRefs(useScreenStore());
 </script>
 
 <template>
-  <header class="fixed z-50 h-16 w-full bg-white transition-all duration-500">
+  <header
+    class="fixed z-50 h-16 w-full bg-white bg-opacity-50 backdrop-blur transition-all duration-500"
+  >
     <nav
       class="my-auto flex justify-between px-4 py-1.5 text-black transition-all duration-500 lg:px-16 lg:py-1"
     >
