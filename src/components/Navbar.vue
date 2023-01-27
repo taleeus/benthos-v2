@@ -17,7 +17,9 @@ const toggleMobileNav = () => {
 </script>
 
 <template>
-  <header class="fixed z-50 h-16 w-full bg-white transition-all duration-500">
+  <header
+    class="fixed z-50 h-16 w-full bg-white transition-all duration-500 bg-opacity-50 backdrop-blur"
+  >
     <nav
       class="my-auto flex justify-between px-4 py-1.5 text-black transition-all duration-500 lg:px-16 lg:py-1"
     >
@@ -27,7 +29,7 @@ const toggleMobileNav = () => {
       <ul v-show="!isMobile" class="flex">
         <li v-for="route in routes" class="mx-6 p-4 uppercase">
           <router-link
-            class="no-underline hover:text-brown"
+            class="font-medium no-underline hover:text-darkBrown"
             :to="{ name: `${route.componentName}` }"
             >{{ route.displayName }}</router-link
           >
@@ -44,15 +46,11 @@ const toggleMobileNav = () => {
       <transition name="mobile-nav">
         <ul
           v-show="mobileNav && isMobile"
-          class="fixed top-2.5 left-0 flex h-full w-full max-w-[240px] flex-col bg-white font-medium"
+          class="fixed top-16 left-0 flex h-screen w-full max-w-[240px] flex-col bg-white bg-opacity-50 backdrop-blur"
         >
-          <li
-            class="p-4 uppercase"
-            v-for="route in routes"
-            @click="toggleMobileNav"
-          >
+          <li class="p-4 pl-8 uppercase" v-for="route in routes" @click="toggleMobileNav">
             <router-link
-              class="no-underline"
+              class="no-underline font-medium"
               :to="{ name: `${route.componentName}` }"
               >{{ route.displayName }}</router-link
             >
