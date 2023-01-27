@@ -42,14 +42,6 @@ export const useBandsintownStore = defineStore("bandsintown", () => {
       venue: "Circolo Magnolia",
       ticketsUrl: "https://linktr.ee/dissonancefestival",
     },
-    {
-      name: "Dissonance Festival Test",
-      city: "Milan",
-      country: "Italy",
-      date: new Date("2023/06/03"),
-      venue: "Circolo Magnolia",
-      ticketsUrl: "https://linktr.ee/dissonancefestival",
-    },
   ];
 
   return { events, offlineEvents };
