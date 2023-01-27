@@ -3,7 +3,8 @@ import Section from "../components/Section.vue";
 import VideosSection from "../components/sections/VideosSection.vue";
 import GallerySection from "../components/sections/GallerySection.vue";
 
-const videoIds = ["1fHlNrLm0-c", "QnrbSXxpkDM", "BLEeyhLwgIU", "Wu4u3d_QbOw"];
+const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
+
 const galleryUris = [
   "/assets/gallery/all-slaughter.avif",
   "/assets/gallery/bside-building.avif",
@@ -20,10 +21,10 @@ const galleryUris = [
 
 <template>
   <div>
-    <Section title="Photos" class="bg-white">
+    <Section title="Photos" class="bg-white pt-4 lg:pt-6">
       <GallerySection :gallery-uris="galleryUris"></GallerySection>
     </Section>
-    <Section title="Videos" class="x-0 bg-white bg-grain bg-cover">
+    <Section title="Singles" class="bg-grain bg-cover px-0 pb-20 pt-12">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
