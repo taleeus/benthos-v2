@@ -3,9 +3,13 @@ import Section from "../components/Section.vue";
 import MusicBox from "../components/MusicBox.vue";
 import VideosSection from "../components/sections/VideosSection.vue";
 import { useScreenStore } from "../stores/useScreen";
+import { useBandsintownStore } from "../stores/useBandsintown";
 import { storeToRefs } from "pinia";
+import moment from "moment";
 
 const { isMobile } = storeToRefs(useScreenStore());
+
+const { offlineEvents: events } = useBandsintownStore();
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>
@@ -27,11 +31,13 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
       >
         <img
           v-show="!isMobile"
+          class="rounded-md"
           src="/assets/backgrounds/dissonance-flyer-desktop.avif"
           alt="Dissonance Festival 2023 Flyer"
         />
         <img
           v-show="isMobile"
+          class="rounded-md"
           src="/assets/backgrounds/dissonance-flyer-mobile.avif"
           alt="Dissonance Festival 2023 Flyer"
         />
@@ -63,9 +69,43 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     </Section>
     <Section
       title="Tour Dates"
-      class="flex-col bg-tour bg-cover bg-center text-white lg:bg-center"
+      class="flex-col justify-center bg-tour bg-cover bg-center text-white md:px-4 lg:bg-center"
     >
-      There are no tours announced at the moment.
+      <table
+        class="w-full table-fixed rounded-md bg-black bg-opacity-70 backdrop-blur-sm md:table-fixed lg:table-auto"
+      >
+        <tbody>
+          <tr
+            v-for="event of events"
+            :key="event.name"
+            class="flex-no-wrap flex border-collapse flex-col border-b border-white/50 last:border-b-0 sm:table-row"
+          >
+            <td class="pt-6 font-semibold md:py-6 md:px-4 lg:p-6">
+              {{ event.name }}
+            </td>
+            <td class="pt-4 md:w-1/5 md:py-6 lg:p-6">
+              {{ moment(event.date).format("MMM Do YY") }}
+            </td>
+            <td class="md:py-6 lg:py-6">
+              {{ `${event.venue} | ${event.city}, ${event.country}` }}
+            </td>
+            <td class="pt-6 pb-8 md:py-6 lg:p-6">
+              <a
+                :href="event.ticketsUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-lg border py-2 px-4 font-medium text-white transition-all duration-400 hover:border-cream hover:text-cream"
+              >
+                <FontAwesomeIcon
+                  icon="fa-ticket"
+                  class="mr-2"
+                ></FontAwesomeIcon>
+                Buy tickets</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <div class="my-10">
         <a
           href="https://www.bandsintown.com/a/1419641-benthos?came_from=257&utm_medium=web&utm_source=home&utm_campaign=search_bar"
