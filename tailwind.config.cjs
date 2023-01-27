@@ -24,6 +24,8 @@ module.exports = {
       backgroundImage: {
         "debris-bside-gradient":
           'linear-gradient(to bottom, rgba(240, 239, 235, 0.3), rgb(21, 21, 21)), url("/assets/backgrounds/debris-bside.avif");',
+        dissonance:
+          "linear-gradient(to top, rgba(240, 239, 235, 0), rgb(21, 21, 21)), url(/assets/backgrounds/dissonance-bg.avif)",
         grain: "url(/assets/backgrounds/grain-bg.avif);",
         tour: "url(/assets/backgrounds/tour-bg.avif);",
       },
