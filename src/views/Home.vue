@@ -96,10 +96,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
                 rel="noopener noreferrer"
                 class="rounded-lg border py-2 px-4 font-medium text-white transition-all duration-400 hover:border-cream hover:text-cream"
               >
-                <FontAwesomeIcon
-                  icon="fa-ticket"
-                  class="mr-2"
-                ></FontAwesomeIcon>
+                <FontAwesomeIcon icon="fa-ticket" class="mr-2"></FontAwesomeIcon>
                 Buy tickets</a
               >
             </td>
