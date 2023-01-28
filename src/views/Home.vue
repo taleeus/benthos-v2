@@ -53,7 +53,10 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
       </div></Section
     >
 
-    <Section title="Music" class="bg-black pb-16 text-white">
+    <Section
+      title="Music"
+      class="bg-ii bg-cover bg-center pb-16 backdrop-brightness-50 text-white"
+    >
       <div class="justify-around md:flex lg:flex-row">
         <MusicBox
           cover-art-url="/assets/coverArts/cover-art.avif"

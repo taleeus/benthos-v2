@@ -28,6 +28,7 @@ module.exports = {
           "linear-gradient(to top, rgba(240, 239, 235, 0), rgb(21, 21, 21)), url(/assets/backgrounds/dissonance-bg.avif)",
         grain: "url(/assets/backgrounds/grain-bg.avif);",
         tour: "url(/assets/backgrounds/tour-bg.avif);",
+        ii: "url(/assets/backgrounds/cover-art-bg.avif);",
       },
       transitionDuration: {
         400: "400ms",
