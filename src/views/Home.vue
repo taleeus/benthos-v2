@@ -24,7 +24,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
       class="flex flex-col items-center justify-center bg-dissonance bg-cover bg-center text-white"
     >
       <a
-        class="flex justify-center drop-shadow-lg lg:w-4/5"
+        class="flex justify-center drop-shadow-lg transition-all duration-500 hover:scale-105 lg:w-4/5"
         href="https://linktr.ee/dissonancefestival"
         target="_blank"
         rel="noopener noreferrer"
