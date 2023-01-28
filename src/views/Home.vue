@@ -55,7 +55,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 
     <Section
       title="Music"
-      class="bg-ii bg-cover bg-center pb-16 backdrop-brightness-50 text-white"
+      class="bg-ii bg-cover bg-center pb-16 text-white backdrop-brightness-50"
     >
       <div class="justify-around md:flex lg:flex-row">
         <MusicBox
@@ -116,7 +116,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         >
       </div>
     </Section>
-    <Section title="Singles" class="bg-grain bg-cover px-0 pb-20 pt-12">
+    <Section title="Singles" class="bg-debris bg-cover px-0 pb-20 pt-12 text-white">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
