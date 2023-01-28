@@ -29,6 +29,7 @@ module.exports = {
         grain: "url(/assets/backgrounds/grain-bg.avif);",
         tour: "url(/assets/backgrounds/tour-bg.avif);",
         ii: "url(/assets/backgrounds/cover-art-bg.avif);",
+        debris: "url(/assets/backgrounds/debris-bg.avif);",
       },
       transitionDuration: {
         400: "400ms",
