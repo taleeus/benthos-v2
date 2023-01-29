@@ -78,7 +78,7 @@ const galleryUris = [
             <strong>Soen</strong>, <strong>Destrage</strong>, and many more.
           </p>
           <br />
-          <div class="reviews">
+          <div class="pt-4">
             <p class="border-l-2 border-solid border-cream pl-6 italic">
               “Benthos will have to be measured against this debut album in the
               future, although they certainly are not afraid of it. These are
@@ -134,7 +134,7 @@ const galleryUris = [
         </div>
       </Section>
       <div>
-        <Section title="Music" class="h-full bg-black text-white">
+        <Section title="Music" class="h-full bg-black pt-0 pb-20 text-white">
           <iframe
             class="rounded-md drop-shadow-lg"
             src="https://open.spotify.com/embed/playlist/5PPnrtqNsvNpFy0b0UCYbp?utm_source=generator&theme=0"
@@ -147,14 +147,14 @@ const galleryUris = [
         </Section>
       </div>
     </div>
-    <Section title="Singles" class="bg-debris bg-cover px-0 text-white">
+    <Section title="Singles" class="bg-debris bg-cover px-0 pb-12 text-white">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
-    <Section title="Gallery" class="bg-white">
+    <Section title="Gallery" class="bg-white pb-16 lg:pb-28 lg:pt-14">
       <GallerySection :gallery-uris="galleryUris"></GallerySection>
     </Section>
     <Section
-      class="flex flex-col items-center justify-center gap-10 bg-ii bg-cover bg-center"
+      class="flex flex-col items-center justify-center gap-10 bg-ii bg-cover bg-center py-20"
     >
       <div>
         <iframe
