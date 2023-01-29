@@ -153,6 +153,41 @@ const galleryUris = [
     <Section title="Gallery" class="bg-white">
       <GallerySection :gallery-uris="galleryUris"></GallerySection>
     </Section>
+    <Section
+      class="flex flex-col items-center justify-center gap-10 bg-ii bg-cover bg-center"
+    >
+      <div>
+        <iframe
+          :width="isMobile ? '100%' : 1160"
+          :height="isMobile ? 200 : 653"
+          src="https://www.youtube.com/embed/qWhtsLCHChc?rel=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="flex flex-col gap-10 lg:flex lg:flex-row lg:gap-10">
+        <iframe
+          :width="isMobile ? '100%' : 560"
+          :height="isMobile ? 200 : 315"
+          src="https://www.youtube.com/embed/nljxlFdNnf8?rel=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          :width="isMobile ? '100%' : 560"
+          :height="isMobile ? 200 : 315"
+          src="https://www.youtube.com/embed/4npcWio4UI4?rel=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </Section>
   </div>
 </template>
 
