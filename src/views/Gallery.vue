@@ -24,7 +24,10 @@ const galleryUris = [
     <Section title="Photos" class="bg-white pt-4 lg:pt-6">
       <GallerySection :gallery-uris="galleryUris"></GallerySection>
     </Section>
-    <Section title="Singles" class="bg-debris bg-cover px-0 pb-20 pt-12 text-white">
+    <Section
+      title="Singles"
+      class="bg-debris bg-cover px-0 pb-20 pt-12 text-white"
+    >
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
