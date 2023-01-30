@@ -39,7 +39,9 @@ const tryLogin = async () => {
 
 <template>
   <div class="flex h-screen w-full bg-black bg-debris bg-cover">
-    <div class="m-auto block max-h-fit max-w-sm rounded-lg bg-white px-8 py-6 shadow-lg">
+    <div
+      class="m-auto block max-h-fit max-w-sm rounded-lg bg-white px-8 py-6 shadow-lg"
+    >
       <img src="/assets/logos/logo-black.svg" alt="Benthos Logo" class="mb-5" />
       <form class="grid grid-cols-1 gap-6" @submit.prevent="tryLogin">
         <label class="block">
@@ -59,7 +61,9 @@ const tryLogin = async () => {
           />
         </label>
         <label class="ml-auto block">
-          <Button class="m-0 bg-gray-100 hover:bg-black hover:text-white">Login</Button>
+          <Button class="m-0 bg-gray-100 hover:bg-black hover:text-white"
+            >Login</Button
+          >
         </label>
       </form>
     </div>

@@ -28,7 +28,9 @@ const openStream = () => {
       class="flex w-full flex-col text-center text-base uppercase lg:text-2xl"
     >
       {{ title }}
-      <Button :click-handler="openStream">Listen Now</Button>
+      <Button :click-handler="openStream" class="hover:bg-cream"
+        >Listen Now</Button
+      >
     </div>
   </div>
 </template>
