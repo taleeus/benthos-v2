@@ -126,7 +126,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
       class="relative flex flex-col items-center justify-center bg-grain bg-cover bg-center px-0 pb-0 lg:px-20 lg:pt-4 lg:pb-0"
     >
       <img
-        src="/assets/backgrounds/merch-bg2.png"
+        src="/assets/backgrounds/merch-bg.avif"
         class="pt-20 drop-shadow-xl md:pt-0 lg:pt-0"
       />
 
