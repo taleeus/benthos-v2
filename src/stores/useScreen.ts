@@ -1,28 +1,30 @@
-import { reactive, computed } from 'vue';
-import { defineStore } from 'pinia'
+import { reactive, computed } from "vue";
+import { defineStore } from "pinia";
 
 const screen = reactive({
   width: window.innerWidth,
   height: window.innerHeight,
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   screen.width = window.innerWidth;
   screen.height = window.innerHeight;
 });
 
-export const useScreenStore = defineStore('screen', () => {
+export const useScreenStore = defineStore("screen", () => {
   const screen = reactive({
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  
-  window.addEventListener('resize', () => {
+
+  window.addEventListener("resize", () => {
     screen.width = window.innerWidth;
     screen.height = window.innerHeight;
   });
 
-  const isMobile = computed(() => screen.width < 750);
+  const isMobile = computed(() => screen.width <= 699);
 
-  return { screen, isMobile };
+  const isTablet = computed(() => screen.width >= 700 && screen.width < 1024);
+
+  return { screen, isMobile, isTablet };
 });
