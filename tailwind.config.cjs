@@ -20,6 +20,7 @@ module.exports = {
         egg: "#ebe8d7",
         white: "#f0efeb",
         black: "#151515",
+        red: "#6d2d36",
       },
       backgroundImage: {
         "debris-bside-gradient":
@@ -30,6 +31,7 @@ module.exports = {
         tour: "url(/assets/backgrounds/tour-bg.avif);",
         ii: "url(/assets/backgrounds/cover-art-bg.avif);",
         debris: "url(/assets/backgrounds/debris-bg.avif);",
+        merch: "url(/assets/backgrounds/merch-bg2.png)",
       },
       transitionDuration: {
         400: "400ms",

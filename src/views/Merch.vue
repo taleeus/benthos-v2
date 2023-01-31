@@ -4,13 +4,6 @@ import MerchBox from "../components/MerchBox.vue";
 
 const bigCartelArticles = [
   {
-    title: "II T-Shirt",
-    price: "€ 7.00 (Sale)",
-    imageUrl:
-      "https://assets.bigcartel.com/product_images/350061781/Maglia+logo+Chiaro.png?auto=format&fit=max&w=1300",
-    url: "https://benthosmerch.bigcartel.com/product/ii-t-shirt",
-  },
-  {
     title: "II - Digipak",
     price: "€ 12.00",
     imageUrl:
@@ -42,7 +35,7 @@ const teespringArticles = [
   },
   {
     title: "Hoodie",
-    price: "€ 24.98",
+    price: "€ 39.76",
     imageUrl:
       "https://vangogh.teespring.com/v3/image/loJE8i2vas9WV3cTjbBsZjqZXz0/480/560.jpg",
     url: "https://teespring.com/debris-hoodie?tsmac=store&tsmic=benthos",
@@ -52,11 +45,14 @@ const teespringArticles = [
 
 <template>
   <div>
-    <Section title="Big Cartel" class="bg-black text-white">
+    <Section
+      title="Merch"
+      class="bg-white bg-grain bg-cover bg-center lg:pt-6 lg:pb-16"
+    >
       <div class="flex flex-row flex-wrap justify-around">
         <MerchBox
-          class="m-4 bg-[#FFF] text-black"
-          v-for="article in bigCartelArticles"
+          class="m-4 bg-[#f6f6f8] drop-shadow-lg"
+          v-for="article in teespringArticles"
           :key="article.title"
           :title="article.title"
           :price="article.price"
@@ -65,11 +61,12 @@ const teespringArticles = [
         ></MerchBox>
       </div>
     </Section>
-    <Section title="Teespring" class="bg-white bg-grain bg-cover">
+
+    <Section title="Music" class="bg-ii bg-cover bg-center text-white lg:py-8">
       <div class="flex flex-row flex-wrap justify-around">
         <MerchBox
-          class="m-4 bg-[#f6f6f8]"
-          v-for="article in teespringArticles"
+          class="m-4 bg-[#FFF] text-black"
+          v-for="article in bigCartelArticles"
           :key="article.title"
           :title="article.title"
           :price="article.price"

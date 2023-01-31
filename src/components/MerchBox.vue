@@ -23,7 +23,7 @@ defineProps<{
           class="transition-all duration-400 hover:scale-105 hover:opacity-95"
         />
       </div>
-      {{ title }}
+      <div class="mt-4">{{ title }}</div>
       <div class="text-sm lg:text-base">
         {{ price }}
       </div>
