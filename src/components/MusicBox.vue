@@ -4,6 +4,7 @@ import Button from "./Button.vue";
 const props = defineProps<{
   coverArtUrl: string;
   coverArtAlt?: string;
+  releaseType: string;
   title: string;
   streamUrl: string;
 }>();
@@ -27,6 +28,7 @@ const openStream = () => {
     <div
       class="flex w-full flex-col text-center text-base uppercase lg:text-2xl"
     >
+      <p class="hidden pb-4 text-xs md:block lg:block">{{ releaseType }}</p>
       {{ title }}
       <Button :click-handler="openStream" class="hover:bg-cream"
         >Listen Now</Button
