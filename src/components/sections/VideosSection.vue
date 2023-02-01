@@ -5,14 +5,14 @@ defineProps<{
   videoIds: string[];
 }>();
 
-const { isMobile } = storeToRefs(useScreenStore());
+const { isMobile, isTablet } = storeToRefs(useScreenStore());
 </script>
 
 <template>
   <Carousel wrap-around>
     <Slide v-for="videoId in videoIds" :key="videoId" class="w-full">
       <iframe
-        :width="isMobile ? 248 : 800"
+        :width="isMobile ? 240 : isTablet ? 600 : 800"
         :height="isMobile ? 140 : 450"
         :src="`https://www.youtube.com/embed/${videoId}?modestbranding=1`"
         title="YouTube video player"
