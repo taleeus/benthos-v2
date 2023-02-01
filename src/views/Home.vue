@@ -9,7 +9,9 @@ import moment from "moment";
 
 const { isMobile } = storeToRefs(useScreenStore());
 
-const { offlineEvents: events } = useBandsintownStore();
+const { fetchEvents } = useBandsintownStore();
+const { events } = storeToRefs(useBandsintownStore());
+fetchEvents();
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>
@@ -101,10 +103,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
                 rel="noopener noreferrer"
                 class="rounded-lg border py-2 px-4 font-medium text-white transition-all duration-400 hover:border-cream hover:text-cream"
               >
-                <FontAwesomeIcon
-                  icon="fa-ticket"
-                  class="mr-2"
-                ></FontAwesomeIcon>
+                <FontAwesomeIcon icon="fa-ticket" class="mr-2"></FontAwesomeIcon>
                 Buy tickets</a
               >
             </td>
@@ -138,10 +137,7 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         >Shop now</a
       >
     </Section>
-    <Section
-      title="Singles"
-      class="bg-debris bg-cover px-0 pb-20 pt-12 text-white"
-    >
+    <Section title="Singles" class="bg-debris bg-cover px-0 pb-20 pt-12 text-white">
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
   </div>
