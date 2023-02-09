@@ -2,43 +2,39 @@
 import Section from "../components/Section.vue";
 import MerchBox from "../components/MerchBox.vue";
 
-const bigCartelArticles = [
-  {
-    title: "II - Digipak",
-    price: "€ 12.00",
-    imageUrl:
-      "https://assets.bigcartel.com/product_images/350794669/merch+IG+CD+copia.jpg?auto=format&fit=max&w=800",
-    url: "https://benthosmerch.bigcartel.com/product/ii-digipak",
-  },
-];
 const teespringArticles = [
   {
     title: "II T-Shirt",
     price: "€ 13.98",
-    imageUrl:
-      "https://vangogh.teespring.com/v3/image/kZeFCDJRZNk7kuvXka8_G_ZTvMw/480/560.jpg",
+    imageUrl: "/assets/merch/ii-tshirt.avif",
     url: "https://teespring.com/ii-t-shirt?tsmac=store&tsmic=benthos",
   },
   {
     title: "T-Shirt",
     price: "€ 13.98",
-    imageUrl:
-      "https://vangogh.teespring.com/v3/image/mGMctYRpLHsAMu5P09btCVOj8p8/480/560.jpg",
+    imageUrl: "/assets/merch/tshirt.avif",
     url: "https://teespring.com/debris-t-shirt?tsmac=store&tsmic=benthos",
   },
   {
     title: "Long Sleeve",
     price: "€ 19.98",
-    imageUrl:
-      "https://vangogh.teespring.com/v3/image/473fIJpli2OZNKd09H3ufjmxi9s/480/560.jpg",
+    imageUrl: "/assets/merch/longsleeve.avif",
     url: "https://teespring.com/debris-LongSleeve?tsmac=store&tsmic=benthos",
   },
   {
     title: "Hoodie",
     price: "€ 39.76",
-    imageUrl:
-      "https://vangogh.teespring.com/v3/image/loJE8i2vas9WV3cTjbBsZjqZXz0/480/560.jpg",
+    imageUrl: "/assets/merch/hoodie.avif",
     url: "https://teespring.com/debris-hoodie?tsmac=store&tsmic=benthos",
+  },
+];
+
+const bigCartelArticles = [
+  {
+    title: "II - Digipak",
+    price: "€ 12.00",
+    imageUrl: "/assets/merch/ii-digipak.avif",
+    url: "https://benthosmerch.bigcartel.com/product/ii-digipak",
   },
 ];
 </script>
