@@ -1,8 +1,8 @@
-import { defineStore } from "pinia";
 import axios from "axios";
-import { Event } from "../types/events.types";
-import { EventData } from "../types/bandsintown.types";
+import { defineStore } from "pinia";
 import { ref } from "vue";
+import { EventData } from "../types/bandsintown.types";
+import { Event } from "../types/events.types";
 
 export const useBandsintownStore = defineStore("bandsintown", () => {
   const events = ref<Event[]>([]);
@@ -23,7 +23,8 @@ export const useBandsintownStore = defineStore("bandsintown", () => {
       venue: e.venue.name,
       city: e.venue.city,
       country: e.venue.country,
-      ticketsUrl: e.offers[0].url,
+      location: e.venue.location,
+      ticketsUrl: e.offers[0]?.url,
     }));
 
     return events;
