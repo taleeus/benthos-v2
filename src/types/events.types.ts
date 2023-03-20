@@ -4,5 +4,6 @@ export interface Event {
   city: string;
   country: string;
   venue: string;
-  ticketsUrl: string;
+  location: string;
+  ticketsUrl?: string;
 }
