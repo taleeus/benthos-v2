@@ -16,7 +16,7 @@ defineProps<{
   >
     <div class="p-6 text-xl uppercase lg:p-8 lg:text-2xl">
       <div
-        class="flex h-[12rem] w-[12rem] items-center justify-center lg:h-[20rem] lg:w-[20rem]"
+        class="flex h-[12rem] w-[12rem] items-center justify-center mx-auto lg:h-[20rem] lg:w-[20rem]"
       >
         <img
           :src="imageUrl"
