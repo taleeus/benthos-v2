@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import moment from "moment";
 import { storeToRefs } from "pinia";
+import LazyImage from "../components/LazyImage.vue";
 import MusicBox from "../components/MusicBox.vue";
 import Section from "../components/Section.vue";
 import VideosSection from "../components/sections/VideosSection.vue";
 import { useBandsintownStore } from "../stores/useBandsintown";
+import { useBigcartelStore } from "../stores/useBigcartel";
 import { useScreenStore } from "../stores/useScreen";
 
-const { isMobile } = storeToRefs(useScreenStore());
-
-const { fetchEvents } = useBandsintownStore();
+useScreenStore();
+useBigcartelStore();  // Already caching merch
 const { events } = storeToRefs(useBandsintownStore());
-fetchEvents();
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 </script>
@@ -19,26 +19,13 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 <template>
   <div>
     <div class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top lg:h-[48rem]"></div>
-    <Section title="Dissonance Festival 2023"
-      class="flex flex-col items-center justify-center bg-dissonance bg-cover bg-center text-white">
-      <a class="flex justify-center drop-shadow-lg transition-all duration-500 hover:scale-105 lg:w-4/5"
-        href="https://linktr.ee/dissonancefestival" target="_blank" rel="noopener noreferrer">
-        <img v-show="!isMobile" class="rounded-md" src="/assets/backgrounds/dissonance-flyer-desktop.avif"
-          alt="Dissonance Festival 2023 Flyer" />
-        <img v-show="isMobile" class="rounded-md" src="/assets/backgrounds/dissonance-flyer-mobile.avif"
-          alt="Dissonance Festival 2023 Flyer" />
-      </a>
-      <div class="mt-6 flex gap-10 lg:mt-14">
-        <a href="https://linktr.ee/dissonancefestival" target="_blank" rel="noopener noreferrer"
-          class="rounded-lg bg-white py-4 px-10 font-medium uppercase text-black hover:bg-lightGrey">Buy Tickets</a>
-      </div>
-    </Section>
-
     <Section title="Music" class="bg-ii bg-cover bg-center pb-16 text-white backdrop-brightness-50">
       <div class="justify-around md:flex lg:flex-row">
-        <MusicBox cover-art-url="/assets/coverArts/cover-art.avif" release-type="Album" title="II"
+        <MusicBox cover-art-url="/assets/coverArts/medium/cover-art.medium.avif"
+          cover-art-placeholder="/assets/coverArts/small/cover-art.small.avif" release-type="Album" title="II"
           stream-url="https://ffm.to/bnthii"></MusicBox>
-        <MusicBox cover-art-url="/assets/coverArts/debris-essence-bside.avif" release-type="Single"
+        <MusicBox cover-art-url="/assets/coverArts/medium/debris-essence-bside.medium.avif"
+          cover-art-placeholder="/assets/coverArts/small/debris-essence-bside.small.avif" release-type="Single"
           title="Debris // Essence B-Side" stream-url="https://ffm.to/dbrs"></MusicBox>
       </div>
     </Section>
@@ -75,8 +62,9 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     </Section>
     <Section title="Merch"
       class="relative flex flex-col items-center justify-center bg-grain bg-cover bg-center px-0 pb-0 lg:px-20 lg:pt-4 lg:pb-0">
-      <img src="/assets/backgrounds/merch-bg.avif" class="pt-20 drop-shadow-xl md:pt-0 lg:pt-0" />
-
+      <lazy-image src="/assets/backgrounds/medium/merch-bg.medium.avif"
+        placeholder="/assets/backgrounds/small/merch-bg.small.avif"
+        class="pt-20 drop-shadow-xl md:pt-0 lg:pt-0" />
       <a href="https://benthos-music.com/merch" target="_blank" rel="noopener noreferrer"
         class="absolute top-28 rounded-lg bg-red bg-cover py-4 px-6 font-medium uppercase text-white drop-shadow-md hover:bg-white hover:text-black md:top-48 md:py-6 md:px-12 md:text-xl lg:top-72 lg:py-6 lg:px-12 lg:text-xl">Shop
         now</a>

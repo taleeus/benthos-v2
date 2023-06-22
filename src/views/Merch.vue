@@ -1,42 +1,17 @@
 <script setup lang="ts">
-import Section from "../components/Section.vue";
+import { storeToRefs } from "pinia";
 import MerchBox from "../components/MerchBox.vue";
+import Section from "../components/Section.vue";
+import { useBigcartelStore } from "../stores/useBigcartel";
+import { Merch } from "../types/merch.types";
+import { not } from "../utilities/predicates";
 
-const teespringArticles = [
-  {
-    title: "II T-Shirt",
-    price: "€ 13.98",
-    imageUrl: "/assets/merch/ii-tshirt.avif",
-    url: "https://teespring.com/ii-t-shirt?tsmac=store&tsmic=benthos",
-  },
-  {
-    title: "T-Shirt",
-    price: "€ 13.98",
-    imageUrl: "/assets/merch/tshirt.avif",
-    url: "https://teespring.com/debris-t-shirt?tsmac=store&tsmic=benthos",
-  },
-  {
-    title: "Long Sleeve",
-    price: "€ 19.98",
-    imageUrl: "/assets/merch/longsleeve.avif",
-    url: "https://teespring.com/debris-LongSleeve?tsmac=store&tsmic=benthos",
-  },
-  {
-    title: "Hoodie",
-    price: "€ 39.76",
-    imageUrl: "/assets/merch/hoodie.avif",
-    url: "https://teespring.com/debris-hoodie?tsmac=store&tsmic=benthos",
-  },
-];
+const { merch } = storeToRefs(useBigcartelStore());
 
-const bigCartelArticles = [
-  {
-    title: "II - Digipak",
-    price: "€ 12.00",
-    imageUrl: "/assets/merch/ii-digipak.avif",
-    url: "https://benthosmerch.bigcartel.com/product/ii-digipak",
-  },
-];
+const musicTypes = ["digipak", "album", "cd", "vinyl"];
+const musicPredicate = (m: Merch) => musicTypes
+  .map((word) => m.name.toLowerCase().includes(word))
+  .reduce((a, b) => a || b, false);
 </script>
 
 <template>
@@ -47,12 +22,13 @@ const bigCartelArticles = [
     >
       <div class="flex flex-row flex-wrap justify-around">
         <MerchBox
-          class="m-4 bg-[#f6f6f8] drop-shadow-lg"
-          v-for="article in teespringArticles"
-          :key="article.title"
-          :title="article.title"
+          class="m-4 bg-[#FFF] text-black"
+          v-for="article in merch.filter(not(musicPredicate))"
+          :key="article.name"
+          :title="article.name"
           :price="article.price"
           :image-url="article.imageUrl"
+          :placeholder-url="article.imageUrl.replaceAll('1000', '200')"
           :article-url="article.url"
         ></MerchBox>
       </div>
@@ -62,11 +38,12 @@ const bigCartelArticles = [
       <div class="flex flex-row flex-wrap justify-around">
         <MerchBox
           class="m-4 bg-[#FFF] text-black"
-          v-for="article in bigCartelArticles"
-          :key="article.title"
-          :title="article.title"
+          v-for="article in merch.filter(musicPredicate)"
+          :key="article.name"
+          :title="article.name"
           :price="article.price"
           :image-url="article.imageUrl"
+          :placeholder-url="article.imageUrl.replaceAll('1000', '200')"
           :article-url="article.url"
         ></MerchBox>
       </div>

@@ -30,5 +30,6 @@ export const useBandsintownStore = defineStore("bandsintown", () => {
     return events;
   };
 
+  fetchEvents();
   return { events, fetchEvents };
 });
