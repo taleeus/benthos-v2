@@ -24,14 +24,13 @@ module.exports = {
       },
       backgroundImage: {
         "debris-bside-gradient":
-          'linear-gradient(to bottom, rgba(240, 239, 235, 0.3), rgb(21, 21, 21)), url("/assets/backgrounds/debris-bside.avif");',
+          'linear-gradient(to bottom, rgba(240, 239, 235, 0.3), rgb(21, 21, 21)), url("/assets/backgrounds/large/debris-bside.large.avif");',
         dissonance:
-          "linear-gradient(to top, rgba(240, 239, 235, 0), rgb(21, 21, 21)), url(/assets/backgrounds/dissonance-bg.avif)",
-        grain: "url(/assets/backgrounds/grain-bg.avif);",
-        tour: "url(/assets/backgrounds/tour-bg.avif);",
-        ii: "url(/assets/backgrounds/cover-art-bg.avif);",
-        debris: "url(/assets/backgrounds/debris-bg.avif);",
-        merch: "url(/assets/backgrounds/merch-bg2.png)",
+          "linear-gradient(to top, rgba(240, 239, 235, 0), rgb(21, 21, 21)), url(/assets/backgrounds/large/dissonance-bg.large.avif)",
+        grain: "url(/assets/backgrounds/large/grain-bg.large.avif);",
+        tour: "url(/assets/backgrounds/large/tour-bg.large.avif);",
+        ii: "url(/assets/backgrounds/large/cover-art-bg.large.avif);",
+        debris: "url(/assets/backgrounds/large/debris-bg.large.avif);",
       },
       transitionDuration: {
         400: "400ms",

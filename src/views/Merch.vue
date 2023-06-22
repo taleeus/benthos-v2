@@ -6,9 +6,7 @@ import { useBigcartelStore } from "../stores/useBigcartel";
 import { Merch } from "../types/merch.types";
 import { not } from "../utilities/predicates";
 
-const { fetchMerch } = useBigcartelStore();
 const { merch } = storeToRefs(useBigcartelStore());
-fetchMerch();
 
 const musicTypes = ["digipak", "album", "cd", "vinyl"];
 const musicPredicate = (m: Merch) => musicTypes
@@ -30,6 +28,7 @@ const musicPredicate = (m: Merch) => musicTypes
           :title="article.name"
           :price="article.price"
           :image-url="article.imageUrl"
+          :placeholder-url="article.imageUrl.replaceAll('1000', '200')"
           :article-url="article.url"
         ></MerchBox>
       </div>
@@ -44,6 +43,7 @@ const musicPredicate = (m: Merch) => musicTypes
           :title="article.name"
           :price="article.price"
           :image-url="article.imageUrl"
+          :placeholder-url="article.imageUrl.replaceAll('1000', '200')"
           :article-url="article.url"
         ></MerchBox>
       </div>

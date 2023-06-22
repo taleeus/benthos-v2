@@ -5,14 +5,16 @@ import router from './router'
 
 import { createPinia } from 'pinia'
 
-import './style.css'
 import 'vue3-carousel/dist/carousel.css'
+import './style.css'
 
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import FontAwesomeIcon from './utilities/fontawesome-icons'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-import VueSweetalert2 from 'vue-sweetalert2';
-import 'sweetalert2/dist/sweetalert2.min.css';
+import 'sweetalert2/dist/sweetalert2.min.css'
+import VueSweetalert2 from 'vue-sweetalert2'
+
+import VLazyImage from 'v-lazy-image'
 
 const pinia = createPinia()
 
@@ -25,4 +27,5 @@ createApp(App)
   .component("Slide", Slide)
   .component("Pagination", Pagination)
   .component("Navigation", Navigation)
+  .component("VLazyImage", VLazyImage)
   .mount('#app')
