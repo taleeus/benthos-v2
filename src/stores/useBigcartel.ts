@@ -36,5 +36,7 @@ export const useBigcartelStore = defineStore("bigcartel", () => {
     return merch;
   };
 
+
+  fetchMerch();
   return { merch, fetchMerch };
 });

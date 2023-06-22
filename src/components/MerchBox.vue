@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import LazyImage from "./LazyImage.vue";
+
 defineProps<{
   title: string;
   imageUrl: string;
+  placeholderUrl: string;
   price: string;
   articleUrl: string;
 }>();
@@ -18,8 +21,9 @@ defineProps<{
       <div
         class="flex h-[12rem] w-[12rem] items-center justify-center mx-auto lg:h-[20rem] lg:w-[20rem]"
       >
-        <img
+        <lazy-image
           :src="imageUrl"
+          :placeholder="placeholderUrl"
           class="drop-shadow-xl transition-all duration-400 hover:scale-105 hover:opacity-95"
         />
       </div>

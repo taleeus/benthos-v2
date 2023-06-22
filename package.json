@@ -24,6 +24,7 @@
     "axios": "^1.2.2",
     "moment": "^2.29.4",
     "pinia": "^2.0.28",
+    "v-lazy-image": "^2.1.1",
     "vue": "^3.2.41",
     "vue-router": "4",
     "vue-sweetalert2": "^5.0.5",

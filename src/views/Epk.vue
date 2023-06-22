@@ -1,26 +1,40 @@
 <script setup lang="ts">
 import EpkBanner from "../components/EpkBanner.vue";
 import Section from "../components/Section.vue";
-import VideosSection from "../components/sections/VideosSection.vue";
 import GallerySection from "../components/sections/GallerySection.vue";
+import VideosSection from "../components/sections/VideosSection.vue";
 
-import { useScreenStore } from "../stores/useScreen";
 import { storeToRefs } from "pinia";
+import { useScreenStore } from "../stores/useScreen";
 
 const { isMobile } = storeToRefs(useScreenStore());
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
+
 const galleryUris = [
-  "/assets/gallery/all-slaughter.avif",
-  "/assets/gallery/bside-building.avif",
-  "/assets/gallery/gl-slaughter.avif",
-  "/assets/gallery/pap-slaughter.avif",
-  "/assets/gallery/ale-slaughter.avif",
-  "/assets/gallery/heads.avif",
-  "/assets/gallery/alby-slaughter.avif",
-  "/assets/gallery/all-modena.avif",
-  "/assets/gallery/heads-debris.avif",
-  "/assets/gallery/trip-slaughter.avif",
+  "/assets/gallery/medium/all-slaughter.medium.avif",
+  "/assets/gallery/medium/bside-building.medium.avif",
+  "/assets/gallery/medium/gl-slaughter.medium.avif",
+  "/assets/gallery/medium/pap-slaughter.medium.avif",
+  "/assets/gallery/medium/ale-slaughter.medium.avif",
+  "/assets/gallery/medium/heads.medium.avif",
+  "/assets/gallery/medium/alby-slaughter.medium.avif",
+  "/assets/gallery/medium/all-modena.medium.avif",
+  "/assets/gallery/medium/heads-debris.medium.avif",
+  "/assets/gallery/medium/trip-slaughter.medium.avif",
+];
+
+const galleryPlaceholders = [
+  "/assets/gallery/small/all-slaughter.small.avif",
+  "/assets/gallery/small/bside-building.small.avif",
+  "/assets/gallery/small/gl-slaughter.small.avif",
+  "/assets/gallery/small/pap-slaughter.small.avif",
+  "/assets/gallery/small/ale-slaughter.small.avif",
+  "/assets/gallery/small/heads.small.avif",
+  "/assets/gallery/small/alby-slaughter.small.avif",
+  "/assets/gallery/small/all-modena.small.avif",
+  "/assets/gallery/small/heads-debris.small.avif",
+  "/assets/gallery/small/trip-slaughter.small.avif",
 ];
 </script>
 
@@ -151,7 +165,7 @@ const galleryUris = [
       <VideosSection :video-ids="videoIds"></VideosSection>
     </Section>
     <Section title="Gallery" class="bg-white pb-16 lg:pb-28 lg:pt-14">
-      <GallerySection :gallery-uris="galleryUris"></GallerySection>
+      <GallerySection :gallery-uris="galleryUris" :gallery-placeholders="galleryPlaceholders"></GallerySection>
     </Section>
     <Section
       class="flex flex-col items-center justify-center gap-10 bg-ii bg-cover bg-center py-20"
