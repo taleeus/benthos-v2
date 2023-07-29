@@ -9,8 +9,8 @@ import { useBandsintownStore } from "../stores/useBandsintown";
 import { useBigcartelStore } from "../stores/useBigcartel";
 import { useScreenStore } from "../stores/useScreen";
 
-useScreenStore();
 useBigcartelStore();  // Already caching merch
+const { isMobile, isTablet } = storeToRefs(useScreenStore());
 const { events } = storeToRefs(useBandsintownStore());
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
@@ -18,7 +18,14 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 
 <template>
   <div>
-    <div class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top lg:h-[48rem]"></div>
+    <video autoplay muted loop
+      :poster="isMobile ? '/assets/bgVideos/dragonfly/dragonfly-clip-mobile-cover.avif' : '/assets/bgVideos/dragonfly/dragonfly-clip-mobile.avif'"
+      class="w-full h-auto">
+      <source
+        :src="isMobile ? '/assets/bgVideos/dragonfly/dragonfly-clip-mobile.webm' : '/assets/bgVideos/dragonfly/dragonfly-clip.webm'"
+        type="video/webm">
+    </video>
+    <!-- <div class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top lg:h-[48rem]"></div> -->
     <Section title="Music" class="bg-ii bg-cover bg-center pb-16 text-white backdrop-brightness-50">
       <div class="justify-around md:flex lg:flex-row">
         <MusicBox cover-art-url="/assets/coverArts/medium/cover-art.medium.avif"
@@ -27,6 +34,14 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
         <MusicBox cover-art-url="/assets/coverArts/medium/debris-essence-bside.medium.avif"
           cover-art-placeholder="/assets/coverArts/small/debris-essence-bside.small.avif" release-type="Single"
           title="Debris // Essence B-Side" stream-url="https://ffm.to/dbrs"></MusicBox>
+      </div>
+    </Section>
+    <Section title="Talk to Me, Dragonfly! @Dissonance" class="text-white bg-dragonfly bg-cover bg-center">
+      <div class="flex align-middle justify-center">
+        <iframe :width="isMobile ? 240 : isTablet ? 600 : 800" :height="isMobile ? 140 : 450"
+          src="https://www.youtube.com/embed/ue1BDz156Z4" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          rel="0" loading="lazy"></iframe>
       </div>
     </Section>
     <Section title="Tour Dates"
@@ -63,11 +78,10 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
     <Section title="Merch"
       class="relative flex flex-col items-center justify-center bg-grain bg-cover bg-center px-0 pb-0 lg:px-20 lg:pt-4 lg:pb-0">
       <lazy-image src="/assets/backgrounds/medium/merch-bg.medium.avif"
-        placeholder="/assets/backgrounds/small/merch-bg.small.avif"
-        class="pt-20 drop-shadow-xl md:pt-0 lg:pt-0" />
-      <a href="https://benthos-music.com/merch" target="_blank" rel="noopener noreferrer"
+        placeholder="/assets/backgrounds/small/merch-bg.small.avif" class="pt-20 drop-shadow-xl md:pt-0 lg:pt-0" />
+      <router-link :to="{ name: 'Merch' }"
         class="absolute top-28 rounded-lg bg-red bg-cover py-4 px-6 font-medium uppercase text-white drop-shadow-md hover:bg-white hover:text-black md:top-48 md:py-6 md:px-12 md:text-xl lg:top-72 lg:py-6 lg:px-12 lg:text-xl">Shop
-        now</a>
+        now</router-link>
     </Section>
     <Section title="Singles" class="bg-debris bg-cover px-0 pb-20 pt-12 text-white">
       <VideosSection :video-ids="videoIds"></VideosSection>

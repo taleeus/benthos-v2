@@ -1,10 +1,10 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
-import Home from "../views/Home.vue";
-import Gallery from "../views/Gallery.vue";
-import Merch from "../views/Merch.vue";
 import Epk from "../views/Epk.vue";
+import Gallery from "../views/Gallery.vue";
+import Home from "../views/Home.vue";
 import LoginEpk from "../views/LoginEpk.vue";
+import Merch from "../views/Merch.vue";
 
 import { useIdentityStore } from "../stores/useIdentity";
 
@@ -47,6 +47,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
 });
 
 router.beforeEach(async (to, from, next): Promise<void> => {
