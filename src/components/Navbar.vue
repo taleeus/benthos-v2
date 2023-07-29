@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { RouteInfo } from "../types/routes.types";
-import { useScreenStore } from "../stores/useScreen";
 import { storeToRefs } from "pinia";
+import { ref } from "vue";
+import { useScreenStore } from "../stores/useScreen";
+import { RouteInfo } from "../types/routes.types";
 
 defineProps<{
   routes: RouteInfo[];

@@ -31,6 +31,7 @@ module.exports = {
         tour: "url(/assets/backgrounds/large/tour-bg.large.avif);",
         ii: "url(/assets/backgrounds/large/cover-art-bg.large.avif);",
         debris: "url(/assets/backgrounds/large/debris-bg.large.avif);",
+        dragonfly: "url(/assets/backgrounds/large/dragonfly.large.avif);",
       },
       transitionDuration: {
         400: "400ms",

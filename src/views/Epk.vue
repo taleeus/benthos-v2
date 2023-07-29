@@ -42,9 +42,16 @@ const galleryPlaceholders = [
   <div>
     <EpkBanner></EpkBanner>
     <div class="h-16 w-full"></div>
-    <div
+    <video autoplay muted loop
+      :poster="isMobile ? '/assets/bgVideos/dragonfly/dragonfly-clip-mobile-cover.avif' : '/assets/bgVideos/dragonfly/dragonfly-clip-mobile.avif'"
+      class="w-full h-auto">
+      <source
+        :src="isMobile ? '/assets/bgVideos/dragonfly/dragonfly-clip-mobile.webm' : '/assets/bgVideos/dragonfly/dragonfly-clip.webm'"
+        type="video/webm">
+    </video>
+    <!-- <div
       class="h-[35vh] w-full bg-debris-bside-gradient bg-cover bg-top px-8 transition-all duration-500 lg:h-[48rem] lg:px-32"
-    ></div>
+    ></div> -->
     <div class="flex flex-col lg:flex-row">
       <Section title="Bio" class="bg-black text-egg">
         <div class="text-justify text-xs lg:text-base">
@@ -174,7 +181,7 @@ const galleryPlaceholders = [
         <iframe
           :width="isMobile ? '100%' : 1160"
           :height="isMobile ? 200 : 653"
-          src="https://www.youtube.com/embed/qWhtsLCHChc?rel=0"
+          src="https://www.youtube.com/embed/ue1BDz156Z4"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
