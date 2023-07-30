@@ -36,9 +36,10 @@ const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
           title="Debris // Essence B-Side" stream-url="https://ffm.to/dbrs"></MusicBox>
       </div>
     </Section>
-    <Section title="Talk to Me, Dragonfly! @Dissonance" class="text-white bg-dragonfly bg-cover bg-center">
+    <Section title="Talk to Me, Dragonfly!" class="text-white bg-dragonfly bg-cover bg-center pb-10">
+      <div class="text-white text-xl uppercase tracking-widest pb-4">Live at Dissonance Festival</div>
       <div class="flex align-middle justify-center">
-        <iframe :width="isMobile ? 240 : isTablet ? 600 : 800" :height="isMobile ? 140 : 450"
+        <iframe :width="isMobile ? 480 : isTablet ? 600 : 800" :height="isMobile ? 220 : 450"
           src="https://www.youtube.com/embed/ue1BDz156Z4" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           rel="0" loading="lazy"></iframe>
