@@ -36,7 +36,7 @@
     "@vitejs/plugin-vue": "^3.2.0",
     "autoprefixer": "^10.4.13",
     "netlify-cli": "^12.5.0",
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.31",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "prisma": "^4.8.1",
