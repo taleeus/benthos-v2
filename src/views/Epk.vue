@@ -2,12 +2,11 @@
 import EpkBanner from "../components/EpkBanner.vue";
 import Section from "../components/Section.vue";
 import GallerySection from "../components/sections/GallerySection.vue";
-import VideosSection from "../components/sections/VideosSection.vue";
 
 import { storeToRefs } from "pinia";
 import { useScreenStore } from "../stores/useScreen";
 
-const { isMobile } = storeToRefs(useScreenStore());
+const { isMobile, isTablet } = storeToRefs(useScreenStore());
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 
@@ -254,13 +253,11 @@ const galleryPlaceholders = [
               allow="autoplay; clipboappears for the first asard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-
             <iframe
               src="https://open.spotify.com/embed/album/5N8Sujic3j3c81bEW2cfSj?utm_source=generator&theme=0"
               :width="isMobile ? '100%' : 400"
               height="352"
               frameBorder="0"
-              allowfullscreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>

@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { storeToRefs } from "pinia";
 import Section from "../components/Section.vue";
 import GallerySection from "../components/sections/GallerySection.vue";
 import VideosSection from "../components/sections/VideosSection.vue";
+import { useScreenStore } from "../stores/useScreen";
+
+const { isMobile, isTablet } = storeToRefs(useScreenStore());
 
 const videoIds = ["hzknSmWxw2I", "TQuuQxOuI_k", "iXOm0oeMGZc", "1tVxbYR59Gc"];
 
