@@ -9,6 +9,11 @@
 
 Website for my band Benthos. Powered by Vue 3 and Tailwind ✌️
 
+# Deprecation notice
+The new website, made by Amalia Cicala, is now online: [check it out!](https://benthos-band.com)
+
+This repository will remain as a public archive.
+
 ## Instructions
 Install packages by running:
 ```sh
